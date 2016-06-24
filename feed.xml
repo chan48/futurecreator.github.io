@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2016-06-24T05:30:18.000Z</updated>
+  <updated>2016-06-24T06:11:00.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://futurecreator.github.io/2016/06/24/hexo-ds-store-error/"/>
     <id>http://futurecreator.github.io/2016/06/24/hexo-ds-store-error/</id>
     <published>2016-06-24T05:24:22.000Z</published>
-    <updated>2016-06-24T05:30:18.000Z</updated>
+    <updated>2016-06-24T06:11:00.000Z</updated>
     
     <content type="html">&lt;p&gt;오늘도 Hexo 블로그를 열심히 하던 중에 알 수 없는 에러를 만났습니다. 이것 때문에 generate 는 커녕 로컬 서버도 안되더군요. 별로 바꾼 것도 없는데 이렇게 되니 당황스러웠습니다.&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR Process failed: layout/.DS_Store&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;TypeError: Cannot read property &amp;apos;compile&amp;apos; of undefined&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -289,9 +289,9 @@
     
       <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
     
-      <category term="github" scheme="http://futurecreator.github.io/tags/github/"/>
-    
       <category term="plugins" scheme="http://futurecreator.github.io/tags/plugins/"/>
+    
+      <category term="github" scheme="http://futurecreator.github.io/tags/github/"/>
     
       <category term="repository" scheme="http://futurecreator.github.io/tags/repository/"/>
     
@@ -1011,9 +1011,9 @@
       <category term="Reviews" scheme="http://futurecreator.github.io/categories/Reviews/"/>
     
     
-      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
-    
       <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
+    
+      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
     
       <category term="evernote" scheme="http://futurecreator.github.io/tags/evernote/"/>
     
@@ -1183,9 +1183,9 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
-    
       <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
+    
+      <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
     
       <category term="googlebot" scheme="http://futurecreator.github.io/tags/googlebot/"/>
     
@@ -1559,9 +1559,9 @@
     
       <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
     
-      <category term="naver" scheme="http://futurecreator.github.io/tags/naver/"/>
-    
       <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
+    
+      <category term="naver" scheme="http://futurecreator.github.io/tags/naver/"/>
     
       <category term="webmaster" scheme="http://futurecreator.github.io/tags/webmaster/"/>
     
@@ -1664,9 +1664,9 @@
     
       <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
-      <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
-    
       <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
+    
+      <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
     
       <category term="analytics" scheme="http://futurecreator.github.io/tags/analytics/"/>
     
@@ -1921,13 +1921,13 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
-    
-      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
-    
       <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
     
+      <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
+    
       <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
+    
+      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
     
   </entry>
   
