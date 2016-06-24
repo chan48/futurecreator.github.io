@@ -156,14 +156,14 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/google/</loc>
+        <loc>http://futurecreator.github.io/tags/search/</loc>
         <lastmod>2016-06-23T07:21:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/search/</loc>
+        <loc>http://futurecreator.github.io/tags/google/</loc>
         <lastmod>2016-06-23T07:21:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -247,13 +247,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/hexo/</loc>
-        <lastmod>2016-06-23T07:25:15.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/plugin/</loc>
         <lastmod>2016-06-23T07:25:15.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -263,6 +256,27 @@
     <url>
         <loc>http://futurecreator.github.io/tags/tag/</loc>
         <lastmod>2016-06-23T07:25:15.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/hexo/</loc>
+        <lastmod>2016-06-24T05:30:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/DS-Store/</loc>
+        <lastmod>2016-06-24T05:30:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/error/</loc>
+        <lastmod>2016-06-24T05:30:18.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
