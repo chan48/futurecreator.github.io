@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2016/06/27/swift-get-started/</loc>
+        <lastmod>2016-06-27T14:52:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2016/06/24/hexo-ds-store-error/</loc>
         <lastmod>2016-06-24T06:11:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
