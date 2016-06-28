@@ -93,20 +93,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/googlebot/</loc>
-        <lastmod>2016-06-23T07:20:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/pagerank/</loc>
-        <lastmod>2016-06-23T07:20:51.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/opengraph/</loc>
         <lastmod>2016-06-23T07:21:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -151,20 +137,6 @@
     <url>
         <loc>http://futurecreator.github.io/tags/seo/</loc>
         <lastmod>2016-06-23T07:21:22.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/google/</loc>
-        <lastmod>2016-06-23T07:21:30.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/search/</loc>
-        <lastmod>2016-06-23T07:21:30.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -291,6 +263,34 @@
     <url>
         <loc>http://futurecreator.github.io/tags/start/</loc>
         <lastmod>2016-06-27T14:52:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/search/</loc>
+        <lastmod>2016-06-28T11:12:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/google/</loc>
+        <lastmod>2016-06-28T11:12:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/googlebot/</loc>
+        <lastmod>2016-06-28T11:12:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/pagerank/</loc>
+        <lastmod>2016-06-28T11:12:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
