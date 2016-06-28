@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2016/06/23/search-engine-optimization-hexo-plugins/</loc>
+        <lastmod>2016-06-28T13:53:55.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2016/06/28/google-200-ranking-factors-korean-list/</loc>
         <lastmod>2016-06-28T13:52:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,14 +41,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/16/add-google-adsense-to-hexo/</loc>
         <lastmod>2016-06-28T13:49:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2016/06/23/search-engine-optimization-hexo-plugins/</loc>
-        <lastmod>2016-06-28T13:48:54.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
