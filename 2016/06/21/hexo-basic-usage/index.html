@@ -1,215 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- Head tag -->
 <head>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Description-->
     
-    <title>Hexo 기본 사용법 | Writer, IT Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-        <meta name="keywords" content="hexo,basic,usage" />
+        <meta name="description" content="Eric Han&#39;s IT Blog using Hexo">
     
 
+    <!--Author-->
+    
+        <meta name="author" content="Eric Han">
     
 
-    <meta name="description" content="Hexo 는 이전 포스트 에서 알아본 간단한 커맨드만 있어도 충분히 사용 가능합니다. 하지만 Hexo 는 편하게 블로깅할 수 있는 여러가지 기능을 제공합니다. 이번 포스트에서는 기본적인 사용법을 좀 더 자세히 알아보겠습니다. 알아볼 기능들은 다음과 같습니다.
-
-스캐폴딩을 기반으로 초안을 생성
-본문을 작성할 때 사용할 수 있는 태그 플러그인
-작성을 완료한 후">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 기본 사용법">
-<meta property="og:url" content="http://futurecreator.github.io/2016/06/21/hexo-basic-usage/index.html">
-<meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="Hexo 는 이전 포스트 에서 알아본 간단한 커맨드만 있어도 충분히 사용 가능합니다. 하지만 Hexo 는 편하게 블로깅할 수 있는 여러가지 기능을 제공합니다. 이번 포스트에서는 기본적인 사용법을 좀 더 자세히 알아보겠습니다. 알아볼 기능들은 다음과 같습니다.
-
-스캐폴딩을 기반으로 초안을 생성
-본문을 작성할 때 사용할 수 있는 태그 플러그인
-작성을 완료한 후">
-<meta property="og:image" content="http://www.lovethispic.com/uploaded_images/32698-Just-Take-The-First-Step.jpg">
-<meta property="og:updated_time" content="2016-06-23T07:19:59.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 기본 사용법">
-<meta name="twitter:description" content="Hexo 는 이전 포스트 에서 알아본 간단한 커맨드만 있어도 충분히 사용 가능합니다. 하지만 Hexo 는 편하게 블로깅할 수 있는 여러가지 기능을 제공합니다. 이번 포스트에서는 기본적인 사용법을 좀 더 자세히 알아보겠습니다. 알아볼 기능들은 다음과 같습니다.
-
-스캐폴딩을 기반으로 초안을 생성
-본문을 작성할 때 사용할 수 있는 태그 플러그인
-작성을 완료한 후">
-<meta name="twitter:image" content="http://www.lovethispic.com/uploaded_images/32698-Just-Take-The-First-Step.jpg">
-<meta name="twitter:creator" content="@future_go">
-<meta property="fb:admins" content="100001774570174">
-<meta property="fb:app_id" content="1652051021784453">
-
+    <!--Open Graph Title-->
     
-    
-    <link rel="canonical" href="http://futurecreator.github.io/2016/06/21/hexo-basic-usage/"/>
-
+        <meta property="og:title" content="Hexo 기본 사용법"/>
     
 
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Writer, IT Blog"/>
+
+    <!--Page Cover-->
     
-        <link rel="icon" href="/images/favicon.png" />
+        <meta property="og:image" content="undefined"/>
     
 
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
-    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+    <!-- Title -->
+    
+    <title>Hexo 기본 사용법 - Writer, IT Blog</title>
 
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
 
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
-    
-    
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
-    
-    
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
-    
-    
-        <script type="text/javascript">
-(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
 
-ga('create', 'UA-79199094-2', 'auto');
-ga('send', 'pageview');
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
 
-</script>
-    
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
     
 
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-2948714191026958",
-      enable_page_level_ads: true
-    });
-  </script>
 
 </head>
 
 <body>
-    <div id="wrap">
-        <header id="header">
-    <div id="header-outer" class="outer">
-        <div class="container">
-            <div class="container-inner">
-                <div id="header-title">
-                    <h1 class="logo-wrap">
-                        <a href="/" class="logo"></a>
-                    </h1>
-                    
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">Eric Han&#39;s IT Blog using Hexo</p>
-                        </h2>
-                    
-                </div>
-                <div id="header-inner" class="nav-container">
-                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
-                    <div class="nav-container-inner">
-                        <ul id="main-nav">
-                            
-                                <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="/">Home</a>
-                                </li>
-                            
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/App/">App</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/App/iOS/">iOS</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Spring/">Spring</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/Markdown/">Markdown</a></li></ul></li></ul>
-                                    
-                                <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="https://about.me/donghohan">About</a>
-                                </li>
-                            
-                        </ul>
-                        <nav id="sub-nav">
-                            <div id="search-form-wrap">
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..." />
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
+    <div id="wrapper">
 
-</div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">Writer, IT Blog</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
     </div>
 </header>
-        <div class="container">
-            <div class="main-body container-inner">
-                <div class="main-body-inner">
-                    <section id="main">
-                        <div class="main-body-header">
-    <h1 class="header">
-    
-    <a class="page-title-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Web/Hexo/">Hexo</a>
-    </h1>
-</div>
-                        <div class="main-body-content">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2948714191026958"
-     data-ad-slot="8311183691"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
-                            <article id="post-hexo-basic-usage" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
         
-            <header class="article-header">
+            <li>
+                <a href="/">Home</a>
+            </li>
+        
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+        
+            <li>
+                <a href="/about.html">About</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
                 
-    
-        <h1 class="article-title" itemprop="name">
-        Hexo 기본 사용법
-        </h1>
-    
 
-            </header>
-        
-        <div class="article-subtitle">
-            <a href="/2016/06/21/hexo-basic-usage/" class="article-date">
-    <time datetime="2016-06-20T15:59:57.000Z" itemprop="datePublished">2016-06-21</time>
-</a>
-            
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic/">basic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/usage/">usage</a></li></ul>
+    <h1>Hexo 기본 사용법</h1>
 
-        </div>
-        <div class="article-entry" itemprop="articleBody">
-            <p>Hexo 는 이전 <a href="http://futurecreator.github.io/2016/06/14/get-started-with-hexo/">포스트</a> 에서 알아본 간단한 커맨드만 있어도 충분히 사용 가능합니다. 하지만 Hexo 는 편하게 블로깅할 수 있는 여러가지 기능을 제공합니다. 이번 포스트에서는 기본적인 사용법을 좀 더 자세히 알아보겠습니다. 알아볼 기능들은 다음과 같습니다.</p>
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<p>Hexo 는 이전 <a href="http://futurecreator.github.io/2016/06/14/get-started-with-hexo/">포스트</a> 에서 알아본 간단한 커맨드만 있어도 충분히 사용 가능합니다. 하지만 Hexo 는 편하게 블로깅할 수 있는 여러가지 기능을 제공합니다. 이번 포스트에서는 기본적인 사용법을 좀 더 자세히 알아보겠습니다. 알아볼 기능들은 다음과 같습니다.</p>
 <ul>
 <li>스캐폴딩을 기반으로 초안을 생성</li>
 <li>본문을 작성할 때 사용할 수 있는 태그 플러그인</li>
@@ -514,358 +423,106 @@ ga('send', 'pageview');
 </li>
 </ul>
 
-        </div>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2948714191026958"
-     data-ad-slot="8311183691"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
-        <footer class="article-footer">
-            
+<!-- Tags -->
 
 
-    <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
-    <span class="a2a_divider"></span>
-    <a class="a2a_button_facebook"></a>
-    <a class="a2a_button_twitter"></a>
-    <a class="a2a_button_google_plus"></a>
-    <a class="a2a_button_pinterest"></a>
-    <a class="a2a_button_tumblr"></a>
+
+<div class="tags">
+    <a href="/tags/hexo/" class="button small">hexo</a> <a href="/tags/basic/" class="button small">basic</a> <a href="/tags/usage/" class="button small">usage</a>
 </div>
-<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-<style>
-    .a2a_menu {
-        border-radius: 4px;
-    }
-    .a2a_menu a {
-        margin: 2px 0;
-        font-size: 14px;
-        line-height: 16px;
-        border-radius: 4px;
-        color: inherit !important;
-        font-family: 'Microsoft Yahei';
-    }
-    #a2apage_dropdown {
-        margin: 10px 0;
-    }
-    .a2a_mini_services {
-        padding: 10px;
-    }
-    a.a2a_i,
-    i.a2a_i {
-        width: 122px;
-        line-height: 16px;
-    }
-    a.a2a_i .a2a_svg,
-    a.a2a_more .a2a_svg {
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
-        vertical-align: top;
-        background-size: 16px;
-    }
-    a.a2a_i {
-        border: none !important;
-    }
-    a.a2a_menu_show_more_less {
-        margin: 0;
-        padding: 10px 0;
-        line-height: 16px;
-    }
-    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-    .a2a_mini_services{*+height:1%;}
-</style>
 
 
-        </footer>
-    </div>
-</article>
 
-    <section id="comments">
+<!-- Comments -->
+<div>
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
-    
-    </section>
 
 
-                        </div>
-                    </section>
-                    <aside id="sidebar">
-    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    <div class="sidebar-top">
-        <p>follow:</p>
-        <ul class="social-links">
-            
-                
-                <li>
-                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank">
-                        <i class="icon fa fa-linkedin-square"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/future_go" target="_blank">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/mylovemozzi/" target="_blank">
-                        <i class="icon fa fa-instagram"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator/SpringBootGetStarted" target="_blank">
-                        <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                
-            
-        </ul>
-    </div>
-    <div class="github-card" data-github="futurecreator" data-width="" data-height="" data-theme="default"></div>
-    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2016/06/21/add-github-card-to-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Hexo 네임카드 추가하기 (Github Card)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2016/06/20/mysql-mariadb-isntall-settings-mac-windows/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Mac 과 Windows 에 MySQL (MariaDB) 설치하기</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
+</div>
 
-    
-    <div class="widgets-container">
-        
-            
-                
-    <div class="widget-wrap">
-        <h3 class="widget-title">recents</h3>
-        <div class="widget">
-            <ul id="recent-post" class="">
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/06/27/swift-get-started/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.mirchu.net/wp-content/uploads/2016/02/swift-logo-hero.jpg)" alt="스위프트(Swift) 시작하기" class="thumbnail-image"></span>
-    
-    
-</a>
 
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/App/">App</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/App/iOS/">iOS</a></p>
-                            <p class="item-title"><a href="/2016/06/27/swift-get-started/" class="title">스위프트(Swift) 시작하기</a></p>
-                            <p class="item-date"><time datetime="2016-06-27T14:50:15.000Z" itemprop="datePublished">2016-06-27</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/06/24/hexo-ds-store-error/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/thumbnail/hexo_error_dsstore.png)" alt="Hexo .DS_Store TypeError 해결 방법" class="thumbnail-image"></span>
-    
-    
-</a>
 
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a></p>
-                            <p class="item-title"><a href="/2016/06/24/hexo-ds-store-error/" class="title">Hexo .DS_Store TypeError 해결 방법</a></p>
-                            <p class="item-date"><time datetime="2016-06-24T05:24:22.000Z" itemprop="datePublished">2016-06-24</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/06/23/search-engine-optimization-hexo-plugins/" class="thumbnail">
-    
-    
-        <span style="background-image:url(http://www.inetsolutions.org/wp-content/uploads/2015/12/Googles-John-Mueller-Exposes-His-2016-SEO-Tips.jpg)" alt="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인" class="thumbnail-image"></span>
-    
-    
-</a>
+            </div>
+        </div>
 
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a></p>
-                            <p class="item-title"><a href="/2016/06/23/search-engine-optimization-hexo-plugins/" class="title">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a></p>
-                            <p class="item-date"><time datetime="2016-06-23T07:02:47.000Z" itemprop="datePublished">2016-06-23</time></p>
-                        </div>
-                    </li>
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                This theme was initially developed by <a href="http://html5up.net" target="_blank">HTML5 UP</a>. It is adapted for Hexo by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a>.<br />The source code is available on <a href="https://github.com/klugjo/hexo-theme-phantom" target="_blank">GitHub</a>.
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/thumbnail/github_timeline.jpg)" alt="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a></p>
-                            <p class="item-title"><a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" class="title">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</a></p>
-                            <p class="item-date"><time datetime="2016-06-22T09:04:19.000Z" itemprop="datePublished">2016-06-22</time></p>
-                        </div>
-                    </li>
+                    <li><a href="https://twitter.com/?lang=en" class="icon style2 fa-twitter" target="_blank" ><span class="label">Twitter</span></a></li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/06/21/add-github-card-to-hexo/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://camo.githubusercontent.com/222d804618d12ea390963d6a0445e546c091ee7e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3239303439362f313335303936372f32383036393834382d333731362d313165332d386638372d3062656634356166663163342e706e67)" alt="Hexo 네임카드 추가하기 (Github Card)" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a></p>
-                            <p class="item-title"><a href="/2016/06/21/add-github-card-to-hexo/" class="title">Hexo 네임카드 추가하기 (Github Card)</a></p>
-                            <p class="item-date"><time datetime="2016-06-21T08:25:34.000Z" itemprop="datePublished">2016-06-21</time></p>
-                        </div>
-                    </li>
+                
+                    <li><a href="https://www.facebook.com/" class="icon style2 fa-facebook" target="_blank" ><span class="label">Facebook</span></a></li>
+                
+                
+                    <li><a href="https://www.instagram.com/" class="icon style2 fa-instagram" target="_blank" ><span class="label">Instagram</span></a></li>
+                
+                
+                    <li><a href="https://dribbble.com/" class="icon style2 fa-dribbble" target="_blank" ><span class="label">Dribbble</span></a></li>
+                
+                
+                    <li><a href="https://github.com/klugjo/hexo-theme-phantom/commits?author=klugjo" class="icon style2 fa-github" target="_blank" ><span class="label">GitHub</span></a></li>
+                
+                
+                    <li><a href="https://plus.google.com/" class="icon style2 fa-google-plus" target="_blank" ><span class="label">Google+</span></a></li>
+                
+                
+                    <li><a href="https://www.behance.net/" class="icon style2 fa-behance" target="_blank" ><span class="label">Behance</span></a></li>
+                
+                
+                    <li><a href="https://500px.com/" class="icon style2 fa-500px" target="_blank" ><span class="label">500px</span></a></li>
+                
+                
+                    <li><a href="\#" class="icon style2 fa-envelope-o" target="_blank" ><span class="label">Email</span></a></li>
+                
+                
+                    <li><a href="\#" class="icon style2 fa-rss" target="_blank" ><span class="label">RSS</span></a></li>
                 
             </ul>
-        </div>
-    </div>
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">categories</h3>
-        <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/App/">App</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/App/iOS/">iOS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reviews/">Reviews</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring/">Spring</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/">Hexo</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Markdown/">Markdown</a><span class="category-list-count">1</span></li></ul></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-float">
-        <h3 class="widget-title">tag cloud</h3>
-        <div class="widget tagcloud">
-            <a href="/tags/DS-Store/" style="font-size: 10px;">.DS_Store</a> <a href="/tags/adsense/" style="font-size: 10px;">adsense</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/basic/" style="font-size: 10px;">basic</a> <a href="/tags/blog/" style="font-size: 17.5px;">blog</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/error/" style="font-size: 10px;">error</a> <a href="/tags/evernote/" style="font-size: 10px;">evernote</a> <a href="/tags/github/" style="font-size: 12.5px;">github</a> <a href="/tags/google/" style="font-size: 15px;">google</a> <a href="/tags/googlebot/" style="font-size: 10px;">googlebot</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/tags/metatag/" style="font-size: 10px;">metatag</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/namecard/" style="font-size: 10px;">namecard</a> <a href="/tags/naver/" style="font-size: 10px;">naver</a> <a href="/tags/opengraph/" style="font-size: 10px;">opengraph</a> <a href="/tags/pagerank/" style="font-size: 10px;">pagerank</a> <a href="/tags/plugin/" style="font-size: 12.5px;">plugin</a> <a href="/tags/plugins/" style="font-size: 12.5px;">plugins</a> <a href="/tags/postach/" style="font-size: 10px;">postach</a> <a href="/tags/repository/" style="font-size: 10px;">repository</a> <a href="/tags/search/" style="font-size: 15px;">search</a> <a href="/tags/seo/" style="font-size: 12.5px;">seo</a> <a href="/tags/settings/" style="font-size: 10px;">settings</a> <a href="/tags/social/" style="font-size: 10px;">social</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/start/" style="font-size: 10px;">start</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/tag/" style="font-size: 10px;">tag</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/usage/" style="font-size: 10px;">usage</a> <a href="/tags/velocity/" style="font-size: 10px;">velocity</a> <a href="/tags/web/" style="font-size: 15px;">web</a> <a href="/tags/webmaster/" style="font-size: 10px;">webmaster</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a>
-        </div>
-    </div>
-
-
-            
-        
-    </div>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Skycrapper -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:600px"
-     data-ad-client="ca-pub-2948714191026958"
-     data-ad-slot="8126053690"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</aside>
-
-                </div>
-            </div>
-        </div>
-        <footer id="footer">
-    <div class="container">
-        <div class="container-inner">
-            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-            <div class="credit">
-                <h1 class="logo-wrap">
-                    <a href="/" class="logo"></a>
-                </h1>
-                <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2016 Eric Han</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-            </div>
-        </div>
+        </section>
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+            <li>Hexo: <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></li>
+        </ul>
     </div>
 </footer>
+    </div>
 
-        
+    <!-- After footer scripts -->
     
-    <script>
-    var disqus_shortname = 'futurecreator';
-    
-    
-    var disqus_url = 'http://futurecreator.github.io/2016/06/21/hexo-basic-usage/';
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
 
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
 
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
 
-    
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
-    
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
 
-    
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
-    
-
-
-<!-- Custom Scripts -->
+<!-- Custom Code -->
 <script src="/js/main.js"></script>
 
-    </div>
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
 </body>
+
 </html>
