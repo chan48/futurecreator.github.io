@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2016-07-03T01:52:02.000Z</updated>
+  <updated>2017-01-10T13:07:41.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>정올(JUNGOL) 숫자사각형1(1303) 알고리즘 기초 문제 풀이</title>
+    <link href="http://futurecreator.github.io/2017/01/10/jungol-algorithm-1303/"/>
+    <id>http://futurecreator.github.io/2017/01/10/jungol-algorithm-1303/</id>
+    <published>2017-01-10T13:00:00.000Z</published>
+    <updated>2017-01-10T13:07:41.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;실력키우기-gt-도형만들기-gt-숫자사각형1-1303&quot;&gt;&lt;a href=&quot;#실력키우기-gt-도형만들기-gt-숫자사각형1-1303&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 도형만들기 &amp;gt; 숫자사각형1 (1303)&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;amp;wr_id=2069&amp;amp;sca=2010&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;실력키우기 &amp;gt; 도형만들기 &amp;gt; 숫자사각형1 (1303)&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;입력받은 두 숫자 n, m 으로 n x m 배열 형태로 출력하는 문제입니다. 이중 for 문을 이용해 간단하게 출력 가능합니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**************************************************************&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Problem: 1303&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    User: future_creator&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Language: Java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Result: Success&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Time:254 ms&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Memory:10492 kb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;****************************************************************/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Main&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Scanner sc = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Scanner(System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n = sc.nextInt();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; m = sc.nextInt();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; k = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; n; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; m; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                System.out.print(k++ + &lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            System.out.println();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;실력키우기-gt-도형만들기-gt-숫자사각형1-1303&quot;&gt;&lt;a href=&quot;#실력키우기-gt-도형만들기-gt-숫자사각형1-1303&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 도형만들기 &amp;gt; 숫자사각형1 (1303
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://futurecreator.github.io/categories/Algorithm/"/>
+    
+      <category term="Jungol" scheme="http://futurecreator.github.io/categories/Algorithm/Jungol/"/>
+    
+    
+      <category term="basic" scheme="http://futurecreator.github.io/tags/basic/"/>
+    
+      <category term="algorithm" scheme="http://futurecreator.github.io/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>프리라이팅에 적합한 글쓰기 앱 Flowstate (Mac OS X 추천앱)</title>
@@ -1294,9 +1322,9 @@
       <category term="Reviews" scheme="http://futurecreator.github.io/categories/Reviews/"/>
     
     
-      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
-    
       <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
+    
+      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
     
       <category term="evernote" scheme="http://futurecreator.github.io/tags/evernote/"/>
     
@@ -2221,13 +2249,13 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
-    
-      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
-    
       <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
     
+      <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
+    
       <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
+    
+      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
     
   </entry>
   
