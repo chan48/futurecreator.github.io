@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2017-01-10T13:25:50.000Z</updated>
+  <updated>2017-01-10T23:06:50.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -16,11 +16,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>정올(JUNGOL) 숫자사각형1(1856) 알고리즘 기초 문제 풀이</title>
+    <title>정올(JUNGOL) 숫자사각형3(1304) 알고리즘 기초 문제 풀이</title>
+    <link href="http://futurecreator.github.io/2017/01/11/jungol-algorithm-1304/"/>
+    <id>http://futurecreator.github.io/2017/01/11/jungol-algorithm-1304/</id>
+    <published>2017-01-10T22:56:11.000Z</published>
+    <updated>2017-01-10T23:06:50.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;실력키우기-gt-도형만들기-gt-숫자사각형3-1304&quot;&gt;&lt;a href=&quot;#실력키우기-gt-도형만들기-gt-숫자사각형3-1304&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 도형만들기 &amp;gt; 숫자사각형3 (1304)&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;amp;wr_id=2070&amp;amp;sca=2010&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;실력키우기 &amp;gt; 도형만들기 &amp;gt; 숫자사각형3 (1304)&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;정사각형 한 변의 길이 n 을 입력받아 n x n 형태로 숫자를 출력하는 문제입니다. 출력 순서는 가로 방향이 아니라 세로 방향으로 출력합니다. 좀 더 쉽게 접근할 수 있는 방법은 이차원 배열을 선언 후에 세로 방향으로 숫자를 채워나간 후에 출력하면 됩니다.&lt;/p&gt;
+&lt;p&gt;저는 배열 없이 바로 출력하기 위해서 각 열에 사이즈 n 을 곱해서 숫자를 계산했습니다. 어렵지 않게 풀 수 있는 문제입니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**************************************************************&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Problem: 1304&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    User: future_creator&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Language: Java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Result: Success&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Time:359 ms&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Memory:10824 kb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;****************************************************************/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Main&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Scanner sc = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Scanner(System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n = sc.nextInt();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; n; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; n; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                System.out.print(n * j + i + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; + &lt;span class=&quot;string&quot;&gt;&quot; &quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            System.out.println();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;실력키우기-gt-도형만들기-gt-숫자사각형3-1304&quot;&gt;&lt;a href=&quot;#실력키우기-gt-도형만들기-gt-숫자사각형3-1304&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 도형만들기 &amp;gt; 숫자사각형3 (1304
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://futurecreator.github.io/categories/Algorithm/"/>
+    
+      <category term="Jungol" scheme="http://futurecreator.github.io/categories/Algorithm/Jungol/"/>
+    
+    
+      <category term="basic" scheme="http://futurecreator.github.io/tags/basic/"/>
+    
+      <category term="algorithm" scheme="http://futurecreator.github.io/tags/algorithm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>정올(JUNGOL) 숫자사각형2(1856) 알고리즘 기초 문제 풀이</title>
     <link href="http://futurecreator.github.io/2017/01/10/jungol-algorithm-1856/"/>
     <id>http://futurecreator.github.io/2017/01/10/jungol-algorithm-1856/</id>
     <published>2017-01-10T13:13:06.000Z</published>
-    <updated>2017-01-10T13:25:50.000Z</updated>
+    <updated>2017-01-10T13:26:18.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;실력키우기-gt-도형만들기-gt-숫자사각형2-1856&quot;&gt;&lt;a href=&quot;#실력키우기-gt-도형만들기-gt-숫자사각형2-1856&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 도형만들기 &amp;gt; 숫자사각형2 (1856)&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;amp;wr_id=1129&amp;amp;sca=2010&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;실력키우기 &amp;gt; 도형만들기 &amp;gt; 숫자사각형2 (1856)&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;두 수 n, m 을 입력받아 n x m 으로 순서대로 숫자를 출력하면 됩니다. 하지만 짝수번째 줄에서는 순서를 반대로 출력해야 합니다. for 문에서 if 문을 이용해 홀수번째 줄인지 짝수번째 줄인지를 확인하고, 짝수번째 줄일 때는 k 를 새로 계산해 하나씩 감소하면서 출력합니다.&lt;/p&gt;
 &lt;p&gt;바로 출력하기 위해서 이런 방법을 썼지만, 물론 이중배열을 선언해서 풀 수도 있습니다. 짝수번째 줄의 경우에는 배열 읽는 방향을 바꿔서 숫자를 차례대로 저장하면 됩니다.&lt;/p&gt;
@@ -629,9 +658,9 @@
     
       <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
     
-      <category term="plugins" scheme="http://futurecreator.github.io/tags/plugins/"/>
-    
       <category term="github" scheme="http://futurecreator.github.io/tags/github/"/>
+    
+      <category term="plugins" scheme="http://futurecreator.github.io/tags/plugins/"/>
     
       <category term="repository" scheme="http://futurecreator.github.io/tags/repository/"/>
     
