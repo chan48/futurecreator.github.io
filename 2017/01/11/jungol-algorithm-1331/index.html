@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>정올(JUNGOL) 문자마름모(1331) 알고리즘 기초 문제 풀이 | Writer, IT Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="basic,algorithm" />
+    
+
+    
+
+    <meta name="description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 문자마름모 (1331)이번 문제는 달팽이사각형 문제와 비슷하게 겉에서부터 안쪽으로 문자를 채워나가는 형태인데, 마름모 형태인 것이 다릅니다. 일단 마름모 전체가 들어갈 사이즈의 이차원 배열을 선언한 합니다. 이전 문제와 마찬가지로 Point 클래스를 하나 생성해서 현재 위치를 저장합니다. Point 클래스는 이차원 배">
+<meta property="og:type" content="article">
+<meta property="og:title" content="정올(JUNGOL) 문자마름모(1331) 알고리즘 기초 문제 풀이">
+<meta property="og:url" content="http://futurecreator.github.io/2017/01/11/jungol-algorithm-1331/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 문자마름모 (1331)이번 문제는 달팽이사각형 문제와 비슷하게 겉에서부터 안쪽으로 문자를 채워나가는 형태인데, 마름모 형태인 것이 다릅니다. 일단 마름모 전체가 들어갈 사이즈의 이차원 배열을 선언한 합니다. 이전 문제와 마찬가지로 Point 클래스를 하나 생성해서 현재 위치를 저장합니다. Point 클래스는 이차원 배">
+<meta property="og:image" content="http://futurecreator.github.io/images/thumbnail/algorithm_branding.png">
+<meta property="og:updated_time" content="2017-01-11T01:17:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="정올(JUNGOL) 문자마름모(1331) 알고리즘 기초 문제 풀이">
+<meta name="twitter:description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 문자마름모 (1331)이번 문제는 달팽이사각형 문제와 비슷하게 겉에서부터 안쪽으로 문자를 채워나가는 형태인데, 마름모 형태인 것이 다릅니다. 일단 마름모 전체가 들어갈 사이즈의 이차원 배열을 선언한 합니다. 이전 문제와 마찬가지로 Point 클래스를 하나 생성해서 현재 위치를 저장합니다. Point 클래스는 이차원 배">
+<meta name="twitter:image" content="http://futurecreator.github.io/images/thumbnail/algorithm_branding.png">
+<meta name="twitter:creator" content="@future_go">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+
+    
+    
+    <link rel="canonical" href="http://futurecreator.github.io/2017/01/11/jungol-algorithm-1331/"/>
+
+    
+
+    
+        <link rel="icon" href="/images/favicon.png" />
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+
+    
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Eric Han&#39;s IT Blog using Hexo</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/Jungol/">Jungol</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/App/">App</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/App/iOS/">iOS</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Spring/">Spring</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/Markdown/">Markdown</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="https://kr.linkedin.com/in/dongho-han-97465327">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Algorithm/Jungol/">Jungol</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2948714191026958"
+     data-ad-slot="8311183691"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-jungol-algorithm-1331" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        정올(JUNGOL) 문자마름모(1331) 알고리즘 기초 문제 풀이
+        </h1>
+    
+
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2017/01/11/jungol-algorithm-1331/" class="article-date">
+    <time datetime="2017-01-11T00:35:29.000Z" itemprop="datePublished">2017-01-11</time>
+</a>
+            
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic/">basic</a></li></ul>
+
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="실력키우기-gt-도형만들기-gt-문자마름모-1331"><a href="#실력키우기-gt-도형만들기-gt-문자마름모-1331" class="headerlink" title="실력키우기 &gt; 도형만들기 &gt; 문자마름모 (1331)"></a><a href="http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;wr_id=2073&amp;sca=2010" rel="external nofollow" target="_blank">실력키우기 &gt; 도형만들기 &gt; 문자마름모 (1331)</a></h3><p>이번 문제는 달팽이사각형 문제와 비슷하게 겉에서부터 안쪽으로 문자를 채워나가는 형태인데, 마름모 형태인 것이 다릅니다. 일단 마름모 전체가 들어갈 사이즈의 이차원 배열을 선언한 합니다. 이전 문제와 마찬가지로 Point 클래스를 하나 생성해서 현재 위치를 저장합니다. Point 클래스는 이차원 배열 내의 x 좌표와 y 좌표를 저장할 수 있는 int 변수 두개를 가지고 있습니다.</p>
+<p>먼저 갈 수 없는 부분을 채워서 마름모 형태를 만들었습니다. 경계를 쳐놓은 다음에 그 안쪽을 순서대로 채워나갑니다. 방향은 왼쪽 아래, 오른쪽 아래, 오른쪽 위, 왼쪽 위 순으로 int dir 변수를 이용해서 순서대로 진행합니다. dir 값을 하나씩 올려가면서 %4 연산을 하면, dir % 4 값은 1, 2, 3, 0 중에 하나만 나오기 때문에 가능합니다. 이동 전에는 이동할 수 있는지 확인이 필요합니다.</p>
+<p>문자 문제에서 계속 나오는 것처럼, ‘A’는 숫자 65와 같은 값이고, 출력 형태만 다를 뿐입니다. 그래서 처음에 빈 배열에 65를 더해놓고 0부터 시작해서 값을 더했습니다. 그리고 나서 나중에 printf 를 이용해 “%c” 형태로 출력하면 char 형태로 출력됩니다.</p>
+<p>A ~ Z 까지만 반복해서 출력해야 하기 때문에, 알파벳이 26글자이기 때문에 더할 값이 26보다 큰 경우에는 26보다 작게 만들어줍니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**************************************************************</span><br><span class="line">    Problem: 1331</span><br><span class="line">    User: future_creator</span><br><span class="line">    Language: Java</span><br><span class="line">    Result: Success</span><br><span class="line">    Time:858 ms</span><br><span class="line">    Memory:27028 kb</span><br><span class="line">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span>[][] arr;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 전체 사이즈 계산</span></span><br><span class="line">        <span class="keyword">int</span> size = n * <span class="number">2</span> - <span class="number">1</span>;</span><br><span class="line">        arr = <span class="keyword">new</span> <span class="keyword">int</span>[size][size];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            Arrays.fill(arr[i], <span class="number">64</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> k = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 갈 수 없는 지역을 만들어야 한다.</span></span><br><span class="line">        <span class="keyword">int</span> triSize = (<span class="keyword">int</span>) size / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; triSize; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; triSize - i; j++) &#123;</span><br><span class="line">                arr[i][j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; triSize - i; j++) &#123;</span><br><span class="line">                arr[i][size - <span class="number">1</span> - j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i + <span class="number">1</span>; j++) &#123;</span><br><span class="line">                arr[triSize + i + <span class="number">1</span>][j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i + <span class="number">1</span>; j++) &#123;</span><br><span class="line">                arr[triSize + i + <span class="number">1</span>][size - <span class="number">1</span> - j] = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Point p = <span class="keyword">new</span> Point(<span class="number">0</span>, triSize);</span><br><span class="line">        arr[p.x][p.y] = <span class="number">65</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 방향 우선순위는</span></span><br><span class="line">        <span class="comment">// dir1: 왼쪽 아래 x++ y--</span></span><br><span class="line">        <span class="comment">// dir2: 오른쪽 아래 x++ y++</span></span><br><span class="line">        <span class="comment">// dir3: 오른쪽 위 x-- y++</span></span><br><span class="line">        <span class="comment">// dir4: 왼쪽 위 x-- y--</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> dir = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (flag) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">switch</span> (dir % <span class="number">4</span>) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">if</span> (p.x + <span class="number">1</span> &lt; size &amp;&amp; p.y - <span class="number">1</span> &gt; -<span class="number">1</span> &amp;&amp; arr[p.x + <span class="number">1</span>][p.y - <span class="number">1</span>] == <span class="number">64</span>) &#123;</span><br><span class="line">                    <span class="comment">// 왼쪽 아래 갈 수 있으면</span></span><br><span class="line">                    k = func1(k);</span><br><span class="line">                    arr[p.x + <span class="number">1</span>][p.y - <span class="number">1</span>] += k;</span><br><span class="line">                    k++;</span><br><span class="line">                    p.x++;</span><br><span class="line">                    p.y--;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    dir++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">if</span> (p.x + <span class="number">1</span> &lt; size &amp;&amp; p.y + <span class="number">1</span> &lt; size &amp;&amp; arr[p.x + <span class="number">1</span>][p.y + <span class="number">1</span>] == <span class="number">64</span>) &#123;</span><br><span class="line">                    <span class="comment">// 오른쪽 아래 갈 수 있으면</span></span><br><span class="line">                    k = func1(k);</span><br><span class="line">                    arr[p.x + <span class="number">1</span>][p.y + <span class="number">1</span>] += k;</span><br><span class="line">                    k++;</span><br><span class="line">                    p.x++;</span><br><span class="line">                    p.y++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    dir++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                <span class="keyword">if</span> (p.x - <span class="number">1</span> &gt; -<span class="number">1</span> &amp;&amp; p.y + <span class="number">1</span> &lt; size &amp;&amp; arr[p.x - <span class="number">1</span>][p.y + <span class="number">1</span>] == <span class="number">64</span>) &#123;</span><br><span class="line">                    <span class="comment">// 오른쪽 위 갈 수 있으면</span></span><br><span class="line">                    k = func1(k);</span><br><span class="line">                    arr[p.x - <span class="number">1</span>][p.y + <span class="number">1</span>] += k;</span><br><span class="line">                    k++;</span><br><span class="line">                    p.x--;</span><br><span class="line">                    p.y++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    dir++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                <span class="keyword">if</span> (p.x - <span class="number">1</span> &gt; -<span class="number">1</span> &amp;&amp; p.y - <span class="number">1</span> &gt; <span class="number">0</span> &amp;&amp; arr[p.x - <span class="number">1</span>][p.y - <span class="number">1</span>] == <span class="number">64</span>) &#123;</span><br><span class="line">                    <span class="comment">// 왼쪽 위 갈 수 있으면</span></span><br><span class="line">                    k = func1(k);</span><br><span class="line">                    arr[p.x - <span class="number">1</span>][p.y - <span class="number">1</span>] += k;</span><br><span class="line">                    k++;</span><br><span class="line">                    p.x--;</span><br><span class="line">                    p.y--;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 갈 수 없을 때 왼쪽으로 이동 후 dir++</span></span><br><span class="line">                    <span class="keyword">if</span> (p.y - <span class="number">1</span> &gt; -<span class="number">1</span> &amp;&amp; arr[p.x][p.y - <span class="number">1</span>] == <span class="number">64</span>) &#123;</span><br><span class="line">                        k = func1(k);</span><br><span class="line">                        arr[p.x][p.y - <span class="number">1</span>] += k;</span><br><span class="line">                        p.y--;</span><br><span class="line">                        k++;</span><br><span class="line">                        dir++;</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        <span class="comment">// 왼쪽도 못가면 끝</span></span><br><span class="line">                        flag = <span class="keyword">false</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; size; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arr[i][j] == <span class="number">0</span>) &#123;</span><br><span class="line">                    System.out.print(<span class="string">"  "</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    System.out.printf(<span class="string">"%c "</span>, arr[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">func1</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (n &gt; <span class="number">26</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> n - <span class="number">26</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">    <span class="keyword">int</span> y;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Point</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.x = x;</span><br><span class="line">        <span class="keyword">this</span>.y = y;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Point [x="</span> + x + <span class="string">", y="</span> + y + <span class="string">"]"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2948714191026958"
+     data-ad-slot="8311183691"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/future_go" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://www.instagram.com/mylovemozzi/" target="_blank">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator/SpringBootGetStarted" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <div class="github-card" data-github="futurecreator" data-width="" data-height="" data-theme="default"></div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/01/11/jungol-algorithm-1707/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">정올(JUNGOL) 달팽이사각형(1707) 알고리즘 기초 문제 풀이</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/11/jungol-algorithm-1331/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 문자마름모(1331) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/11/jungol-algorithm-1331/" class="title">정올(JUNGOL) 문자마름모(1331) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-11T00:35:29.000Z" itemprop="datePublished">2017-01-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/11/jungol-algorithm-1707/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 달팽이사각형(1707) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/11/jungol-algorithm-1707/" class="title">정올(JUNGOL) 달팽이사각형(1707) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-11T00:12:26.000Z" itemprop="datePublished">2017-01-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/11/jungol-algorithm-1314/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 문자사각형2(1314) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/11/jungol-algorithm-1314/" class="title">정올(JUNGOL) 문자사각형2(1314) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-10T23:50:22.000Z" itemprop="datePublished">2017-01-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/11/jungol-algorithm-1307/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 문자사각형1(1307) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/11/jungol-algorithm-1307/" class="title">정올(JUNGOL) 문자사각형1(1307) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-10T23:27:22.000Z" itemprop="datePublished">2017-01-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/11/jungol-algorithm-2046/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 숫자사각형4(2046) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/11/jungol-algorithm-2046/" class="title">정올(JUNGOL) 숫자사각형4(2046) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-10T23:13:41.000Z" itemprop="datePublished">2017-01-11</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/Jungol/">Jungol</a><span class="category-list-count">8</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/">App</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/App/iOS/">iOS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reviews/">Reviews</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring/">Spring</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/">Hexo</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Markdown/">Markdown</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/DS-Store/" style="font-size: 10px;">.DS_Store</a> <a href="/tags/adsense/" style="font-size: 10px;">adsense</a> <a href="/tags/algorithm/" style="font-size: 16.67px;">algorithm</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/basic/" style="font-size: 18.33px;">basic</a> <a href="/tags/blog/" style="font-size: 15px;">blog</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/error/" style="font-size: 10px;">error</a> <a href="/tags/evernote/" style="font-size: 10px;">evernote</a> <a href="/tags/github/" style="font-size: 11.67px;">github</a> <a href="/tags/google/" style="font-size: 15px;">google</a> <a href="/tags/googlebot/" style="font-size: 10px;">googlebot</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/mac/" style="font-size: 11.67px;">mac</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/markdown/" style="font-size: 13.33px;">markdown</a> <a href="/tags/metatag/" style="font-size: 10px;">metatag</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/namecard/" style="font-size: 10px;">namecard</a> <a href="/tags/naver/" style="font-size: 10px;">naver</a> <a href="/tags/opengraph/" style="font-size: 10px;">opengraph</a> <a href="/tags/osx/" style="font-size: 10px;">osx</a> <a href="/tags/pagerank/" style="font-size: 10px;">pagerank</a> <a href="/tags/plugin/" style="font-size: 11.67px;">plugin</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/postach/" style="font-size: 10px;">postach</a> <a href="/tags/repository/" style="font-size: 10px;">repository</a> <a href="/tags/search/" style="font-size: 15px;">search</a> <a href="/tags/seo/" style="font-size: 11.67px;">seo</a> <a href="/tags/settings/" style="font-size: 10px;">settings</a> <a href="/tags/social/" style="font-size: 10px;">social</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/start/" style="font-size: 10px;">start</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/tag/" style="font-size: 10px;">tag</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/usage/" style="font-size: 10px;">usage</a> <a href="/tags/velocity/" style="font-size: 10px;">velocity</a> <a href="/tags/web/" style="font-size: 13.33px;">web</a> <a href="/tags/webmaster/" style="font-size: 10px;">webmaster</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/writing/" style="font-size: 10px;">writing</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-2948714191026958"
+     data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2017 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'http://futurecreator.github.io/2017/01/11/jungol-algorithm-1331/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
