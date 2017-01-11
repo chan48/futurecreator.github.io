@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2017-01-11T02:33:39.000Z</updated>
+  <updated>2017-01-11T03:16:05.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>정올(JUNGOL) 별삼각형2(1523) 알고리즘 기초 문제 풀이</title>
+    <title>정올(JUNGOL) 별삼각형1(1523) 알고리즘 기초 문제 풀이</title>
     <link href="http://futurecreator.github.io/2017/01/11/jungol-algorithm-1523/"/>
     <id>http://futurecreator.github.io/2017/01/11/jungol-algorithm-1523/</id>
     <published>2017-01-11T02:22:12.000Z</published>
-    <updated>2017-01-11T02:33:39.000Z</updated>
+    <updated>2017-01-11T03:16:05.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;실력키우기-gt-도형만들기-gt-별삼각형1-1523-문제-클릭&quot;&gt;&lt;a href=&quot;#실력키우기-gt-도형만들기-gt-별삼각형1-1523-문제-클릭&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 도형만들기 &amp;gt; 별삼각형1 (1523) 문제 클릭&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;amp;wr_id=795&amp;amp;sca=2010&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;실력키우기 &amp;gt; 도형만들기 &amp;gt; 별삼각형1 (1523) 문제 클릭&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://jungol.co.kr/data/editor/1512/e3050b66a1b29a01767400d7560a4131_1449726587_8627.jpg&quot; alt=&quot;n = 5 일 때 예시&quot;&gt;&lt;/p&gt;
 &lt;p&gt;삼각형의 크기 n 을 입력받고, 종류 m 을 받아서 종류에 해당하는 형태로 출력하는 문제입니다. 이중 &lt;code&gt;for&lt;/code&gt; 문을 이용해서 출력하면 되겠죠. 여기서 &lt;code&gt;i&lt;/code&gt; 는 행(row) 인덱스를 의미하고, &lt;code&gt;j&lt;/code&gt; 는 ‘별을 몇번 찍을 것인가’를 결정짓는 요인입니다.&lt;/p&gt;
