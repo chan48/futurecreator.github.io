@@ -282,14 +282,14 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/markdown/</loc>
+        <loc>http://futurecreator.github.io/tags/blog/</loc>
         <lastmod>2016-08-17T14:06:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/blog/</loc>
+        <loc>http://futurecreator.github.io/tags/markdown/</loc>
         <lastmod>2016-08-17T14:06:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -311,14 +311,14 @@
 
     <url>
         <loc>http://futurecreator.github.io/tags/basic/</loc>
-        <lastmod>2017-01-11T03:50:52.000Z</lastmod>
+        <lastmod>2017-01-11T04:13:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/algorithm/</loc>
-        <lastmod>2017-01-11T03:50:52.000Z</lastmod>
+        <lastmod>2017-01-11T04:13:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
