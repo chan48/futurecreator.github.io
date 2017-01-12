@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>정올(JUNGOL) 별삼각형3(1329) 알고리즘 기초 문제 풀이 | Writer, IT Blog</title>
+    <title>정올(JUNGOL) 구구단(1291) 알고리즘 기초 문제 풀이 | Writer, IT Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="basic,algorithm" />
@@ -11,23 +11,20 @@
 
     
 
-    <meta name="description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 별삼각형3 (1329) 문제 클릭
-모양이 특이해보이지만 이전 문제들을 쭉 풀어오셨다면 별 거 아니란 걸 아실겁니다. 이중 for 문을 이용해 별과 공백을 출력합니다. 즉, 공백을 출력하는 부분과 별을 출력하는 부분을 나눠서 보시면 되겠죠.
-가운데를 기준으로 보면, 위쪽은 공백과 숫자가 함께 늘어납니다. 아래쪽은 공백과">
+    <meta name="description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 구구단 (1291) 문제 클릭간단한 구구단 문제입니다. 하지만 두 수를 입력받아 그 사이의 단수를 순차적으로 정렬해서 출력해야하는 문제입니다.
+입력받는 두 수에 따라서 순서가 달라질 수 있습니다. 예를 들어 3과 5가 입력되는 경우는 3, 4, 5단이 출력되어야 하고, 5와 3이 입력되는 경우는 5, 4, 3 단이 입">
 <meta property="og:type" content="article">
-<meta property="og:title" content="정올(JUNGOL) 별삼각형3(1329) 알고리즘 기초 문제 풀이">
-<meta property="og:url" content="http://futurecreator.github.io/2017/01/11/jungol-algorithm-1329/index.html">
+<meta property="og:title" content="정올(JUNGOL) 구구단(1291) 알고리즘 기초 문제 풀이">
+<meta property="og:url" content="http://futurecreator.github.io/2017/01/11/jungol-algorithm-1291/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 별삼각형3 (1329) 문제 클릭
-모양이 특이해보이지만 이전 문제들을 쭉 풀어오셨다면 별 거 아니란 걸 아실겁니다. 이중 for 문을 이용해 별과 공백을 출력합니다. 즉, 공백을 출력하는 부분과 별을 출력하는 부분을 나눠서 보시면 되겠죠.
-가운데를 기준으로 보면, 위쪽은 공백과 숫자가 함께 늘어납니다. 아래쪽은 공백과">
+<meta property="og:description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 구구단 (1291) 문제 클릭간단한 구구단 문제입니다. 하지만 두 수를 입력받아 그 사이의 단수를 순차적으로 정렬해서 출력해야하는 문제입니다.
+입력받는 두 수에 따라서 순서가 달라질 수 있습니다. 예를 들어 3과 5가 입력되는 경우는 3, 4, 5단이 출력되어야 하고, 5와 3이 입력되는 경우는 5, 4, 3 단이 입">
 <meta property="og:image" content="http://futurecreator.github.io/images/thumbnail/algorithm_branding.png">
-<meta property="og:updated_time" content="2017-01-11T03:50:52.000Z">
+<meta property="og:updated_time" content="2017-01-12T01:13:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="정올(JUNGOL) 별삼각형3(1329) 알고리즘 기초 문제 풀이">
-<meta name="twitter:description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 별삼각형3 (1329) 문제 클릭
-모양이 특이해보이지만 이전 문제들을 쭉 풀어오셨다면 별 거 아니란 걸 아실겁니다. 이중 for 문을 이용해 별과 공백을 출력합니다. 즉, 공백을 출력하는 부분과 별을 출력하는 부분을 나눠서 보시면 되겠죠.
-가운데를 기준으로 보면, 위쪽은 공백과 숫자가 함께 늘어납니다. 아래쪽은 공백과">
+<meta name="twitter:title" content="정올(JUNGOL) 구구단(1291) 알고리즘 기초 문제 풀이">
+<meta name="twitter:description" content="실력키우기 &amp;gt; 도형만들기 &amp;gt; 구구단 (1291) 문제 클릭간단한 구구단 문제입니다. 하지만 두 수를 입력받아 그 사이의 단수를 순차적으로 정렬해서 출력해야하는 문제입니다.
+입력받는 두 수에 따라서 순서가 달라질 수 있습니다. 예를 들어 3과 5가 입력되는 경우는 3, 4, 5단이 출력되어야 하고, 5와 3이 입력되는 경우는 5, 4, 3 단이 입">
 <meta name="twitter:image" content="http://futurecreator.github.io/images/thumbnail/algorithm_branding.png">
 <meta name="twitter:creator" content="@future_go">
 <meta property="fb:admins" content="100001774570174">
@@ -35,7 +32,7 @@
 
     
     
-    <link rel="canonical" href="http://futurecreator.github.io/2017/01/11/jungol-algorithm-1329/"/>
+    <link rel="canonical" href="http://futurecreator.github.io/2017/01/11/jungol-algorithm-1291/"/>
 
     
 
@@ -183,33 +180,32 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-jungol-algorithm-1329" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-jungol-algorithm-1291" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        정올(JUNGOL) 별삼각형3(1329) 알고리즘 기초 문제 풀이
+        정올(JUNGOL) 구구단(1291) 알고리즘 기초 문제 풀이
         </h1>
     
 
             </header>
         
         <div class="article-subtitle">
-            <a href="/2017/01/11/jungol-algorithm-1329/" class="article-date">
-    <time datetime="2017-01-11T03:44:25.000Z" itemprop="datePublished">2017-01-11</time>
+            <a href="/2017/01/11/jungol-algorithm-1291/" class="article-date">
+    <time datetime="2017-01-11T12:23:41.000Z" itemprop="datePublished">2017-01-11</time>
 </a>
             
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic/">basic</a></li></ul>
 
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="실력키우기-gt-도형만들기-gt-별삼각형3-1329-문제-클릭"><a href="#실력키우기-gt-도형만들기-gt-별삼각형3-1329-문제-클릭" class="headerlink" title="실력키우기 &gt; 도형만들기 &gt; 별삼각형3 (1329) 문제 클릭"></a><a href="http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;wr_id=608&amp;sca=2010" rel="external nofollow" target="_blank">실력키우기 &gt; 도형만들기 &gt; 별삼각형3 (1329) 문제 클릭</a></h3><p><img src="http://jungol.co.kr/data/editor/1512/e3050b66a1b29a01767400d7560a4131_1449726625_9518.png" alt="예시"></p>
-<p>모양이 특이해보이지만 이전 문제들을 쭉 풀어오셨다면 별 거 아니란 걸 아실겁니다. 이중 <code>for</code> 문을 이용해 별과 공백을 출력합니다. 즉, 공백을 출력하는 부분과 별을 출력하는 부분을 나눠서 보시면 되겠죠.</p>
-<p>가운데를 기준으로 보면, 위쪽은 공백과 숫자가 함께 늘어납니다. 아래쪽은 공백과 별이 함께 줄어들고 있습니다. 다만 별은 1, 3, 5, 7 이런 식으로 홀수처럼 늘어나고 줄어드는 걸 보실 수 있습니다.</p>
-<p><code>i</code> 는 행의 숫자와 관련이 있고, <code>j</code> 는 실제로 별 또는 공백을 출력하는 횟수와 관련이 있습니다. 전체적으로 <code>i</code> 는 <code>n</code> 번 반복이고, 해당 <code>i</code> 가 가운데를 기준으로 위, 아래로 나눠서 로직을 구현합니다. 공백을 먼저 출력하고 별을 출력하시면 되는데, 몇번 출력하는지 <code>j</code> 를 설정해서 구현하시면 되겠습니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**************************************************************</span><br><span class="line">    Problem: 1329</span><br><span class="line">    User: future_creator</span><br><span class="line">    Language: Java</span><br><span class="line">    Result: Success</span><br><span class="line">    Time:271 ms</span><br><span class="line">    Memory:10628 kb</span><br><span class="line">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span> || n &gt; <span class="number">100</span> || n &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"INPUT ERROR!"</span>);</span><br><span class="line">            System.exit(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> size = (n + <span class="number">1</span>) / <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (i &lt; size) &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">                    System.out.print(<span class="string">" "</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">2</span> * i + <span class="number">1</span>; j++) &#123;</span><br><span class="line">                    System.out.print(<span class="string">"*"</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">                    System.out.print(<span class="string">" "</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">2</span> * (n - i) - <span class="number">1</span>; j++) &#123;</span><br><span class="line">                    System.out.print(<span class="string">"*"</span>);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h3 id="실력키우기-gt-도형만들기-gt-구구단-1291-문제-클릭"><a href="#실력키우기-gt-도형만들기-gt-구구단-1291-문제-클릭" class="headerlink" title="실력키우기 &gt; 도형만들기 &gt; 구구단 (1291) 문제 클릭"></a><a href="http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;wr_id=574&amp;sca=2010" rel="external nofollow" target="_blank">실력키우기 &gt; 도형만들기 &gt; 구구단 (1291) 문제 클릭</a></h3><p>간단한 구구단 문제입니다. 하지만 두 수를 입력받아 그 사이의 단수를 순차적으로 정렬해서 출력해야하는 문제입니다.</p>
+<p>입력받는 두 수에 따라서 순서가 달라질 수 있습니다. 예를 들어 3과 5가 입력되는 경우는 3, 4, 5단이 출력되어야 하고, 5와 3이 입력되는 경우는 5, 4, 3 단이 입력되어야 합니다. 따라서 입력되는 두 수의 크기를 비교해서 로직을 나눴습니다.</p>
+<p>출력하는 폼은 어렵지 않습니다. 보통 구구단 출력 시 3 <em> 1 = 3, 3 </em> 2 = 6, … 이런 순으로 출력하는 대신에 3 <em> 1 = 3, 4 </em> 1 = 4, 5 * 1 = 5, … 순으로 <code>j</code> 가 아닌 <code>i</code> 순으로 출력하면 됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**************************************************************</span><br><span class="line">    Problem: 1291</span><br><span class="line">    User: future_creator</span><br><span class="line">    Language: Java</span><br><span class="line">    Result: Success</span><br><span class="line">    Time:195 ms</span><br><span class="line">    Memory:10300 kb</span><br><span class="line">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">            <span class="keyword">int</span> e = sc.nextInt();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (n &gt; <span class="number">9</span> || e &gt; <span class="number">9</span> || n &lt; <span class="number">2</span> || e &lt; <span class="number">2</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">"INPUT ERROR!"</span>);</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (n &gt; e) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> j = n; j &gt;= e; j--) &#123;</span><br><span class="line">                        System.out.printf(<span class="string">"%d * %d = %2d   "</span>, j, i, j * i);</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> j = n; j &lt;= e; j++) &#123;</span><br><span class="line">                        System.out.printf(<span class="string">"%d * %d = %2d   "</span>, j, i, j * i);</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -344,20 +340,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2017/01/11/jungol-algorithm-1641/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            정올(JUNGOL) 숫자삼각형(1641) 알고리즘 기초 문제 풀이
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2017/01/11/jungol-algorithm-1719/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/01/11/jungol-algorithm-2071/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">정올(JUNGOL) 별삼각형2(1719) 알고리즘 기초 문제 풀이</p>
+        <p class="article-nav-title">정올(JUNGOL) 파스칼 삼각형(2071) 알고리즘 기초 문제 풀이</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -537,7 +523,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'futurecreator';
     
     
-    var disqus_url = 'http://futurecreator.github.io/2017/01/11/jungol-algorithm-1329/';
+    var disqus_url = 'http://futurecreator.github.io/2017/01/11/jungol-algorithm-1291/';
     
     (function() {
     var dsq = document.createElement('script');
