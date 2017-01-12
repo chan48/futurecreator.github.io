@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2017-01-12T08:09:24.000Z</updated>
+  <updated>2017-01-12T08:12:15.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://futurecreator.github.io/2017/01/12/jungol-algorithm-2809/"/>
     <id>http://futurecreator.github.io/2017/01/12/jungol-algorithm-2809/</id>
     <published>2017-01-12T07:14:31.000Z</published>
-    <updated>2017-01-12T08:09:24.000Z</updated>
+    <updated>2017-01-12T08:12:15.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;실력키우기-gt-수학-gt-약수-2809-문제-클릭&quot;&gt;&lt;a href=&quot;#실력키우기-gt-수학-gt-약수-2809-문제-클릭&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 수학 &amp;gt; 약수 (2809) 문제 클릭&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;amp;wr_id=450&amp;amp;sca=2020&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;실력키우기 &amp;gt; 수학 &amp;gt; 약수 (2809) 문제 클릭&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;한 개의 정수를 입력받아 해당 정수의 약수를 모두 구하는 간단한 문제입니다. 약수는 나누어 떨어지는 수이므로, 1부터 자기 자신까지 &lt;code&gt;for&lt;/code&gt; 문으로 쭉 돌면서 나누어 떨어지는지 확인해서 약수인 것을 판별할 수 있습니다. 하지만 문제에서 입력값 범위는 21억까지 굉장히 방대합니다. 여기서 알고리즘의 성능을 조금 높이는 방법을 알아보겠습니다.&lt;/p&gt;
 &lt;p&gt;수학적으로 약수는 제곱근까지만 검사를 해도 모든 약수를 구할 수 있습니다. 문제의 예제에 나온 24를 보겠습니다. 24의 제곱근은 &lt;code&gt;4 * 4 &amp;lt; 24 &amp;lt; 5 * 5&lt;/code&gt; 이므로 4.n 인 것을 알 수 있습니다. 그리고 다음의 약수를 구하는 과정을 보시면 4까지만 검사를 해도 모든 약수를 확인할 수 있는 걸 볼 수 있습니다.&lt;/p&gt;
