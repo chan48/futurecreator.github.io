@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2017-01-12T08:12:15.000Z</updated>
+  <updated>2017-01-15T01:40:14.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -14,6 +14,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 블로그에서 포스트 삭제하는 방법</title>
+    <link href="http://futurecreator.github.io/2017/01/15/how-to-delete-post-in-hexo/"/>
+    <id>http://futurecreator.github.io/2017/01/15/how-to-delete-post-in-hexo/</id>
+    <published>2017-01-15T01:32:24.000Z</published>
+    <updated>2017-01-15T01:40:14.000Z</updated>
+    
+    <content type="html">&lt;p&gt;이전 포스트인 &lt;a href=&quot;http://futurecreator.github.io/2016/06/21/hexo-basic-usage/&quot;&gt;Hexo 기본 사용법&lt;/a&gt;에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다.&lt;/p&gt;
+&lt;h2 id=&quot;Step-1-포스트-파일-및-폴더-삭제하기&quot;&gt;&lt;a href=&quot;#Step-1-포스트-파일-및-폴더-삭제하기&quot; class=&quot;headerlink&quot; title=&quot;Step 1. 포스트 파일 및 폴더 삭제하기&quot;&gt;&lt;/a&gt;Step 1. 포스트 파일 및 폴더 삭제하기&lt;/h2&gt;&lt;p&gt;&lt;code&gt;source/_post&lt;/code&gt; 폴더 밑의 &lt;code&gt;.md&lt;/code&gt; 파일과 함께 생성된 폴더 파일을 삭제합니다.&lt;/p&gt;
+&lt;h2 id=&quot;Step-2-클린하기&quot;&gt;&lt;a href=&quot;#Step-2-클린하기&quot; class=&quot;headerlink&quot; title=&quot;Step 2. 클린하기&quot;&gt;&lt;/a&gt;Step 2. 클린하기&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hexo clean&lt;/code&gt; 명령어를 이용해 database 파일과 public 폴더를 삭제합니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo clean&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Deleted database.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Deleted public folder.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Step-3-생성하기&quot;&gt;&lt;a href=&quot;#Step-3-생성하기&quot; class=&quot;headerlink&quot; title=&quot;Step 3. 생성하기&quot;&gt;&lt;/a&gt;Step 3. 생성하기&lt;/h2&gt;&lt;p&gt;&lt;code&gt;hexo g&lt;/code&gt; 명령어를 이용해 삭제된 포스트를 제외시킨 파일을 재생성합니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Start processing&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Files loaded in 1.71 s&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: content.json&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: tag-sitemap.xml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: post-sitemap.xml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: category-sitemap.xml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: sitemap.xml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: sitemap.xsl&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: feed.xml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: index.html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: archives/index.html&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Generated: images/postach/postach_main.png&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  257 files generated in 4.61 s&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;Step-4-배포하기&quot;&gt;&lt;a href=&quot;#Step-4-배포하기&quot; class=&quot;headerlink&quot; title=&quot;Step 4. 배포하기&quot;&gt;&lt;/a&gt;Step 4. 배포하기&lt;/h2&gt;&lt;p&gt;로컬 서버로 테스트해보면 해당 포스트는 삭제됐을 겁니다. 이제 remote 서버에 있는 블로그에 반영하기 위해 &lt;code&gt;hexo d&lt;/code&gt; 명령어로 배포하면 삭제가 완료됩니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo d&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Deploying: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Clearing .deploy_git folder...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Copying files from public folder...&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[master f29b77a] Site updated: 2017-01-13 16:36:22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 135 files changed, 15 insertions(+), 1071 deletions(-)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;To https://github.com/futureCreator/futurecreator.github.io.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   4a9c14b..f29b77a  HEAD -&amp;gt; master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Branch master set up to track remote branch master from https://github.com/futureCreator/futurecreator.github.io.git.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;INFO  Deploy done: git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Hexo 블로그에서 포스트 삭제하는 법을 알아봤습니다. 정리해보면 다음과 같습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;해당 포스트 파일과 폴더 삭제&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hexo clean&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hexo g&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;hexo d&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Hexo 의 커맨드 환경이 익숙하지 않거나 불편함을 느끼시는 분들이라면, Admin 플러그인을 사용해보시는 것도 좋습니다. Admin 플러그인이란 Hexo 블로그 관리를 쉽게 해주는 플러그인으로, GUI 환경을 제공해 한결 편하게 사용하실 수 있습니다. Admin 플러그인에는 &lt;a href=&quot;https://github.com/jaredly/hexo-admin&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;hexo-admin&lt;/a&gt; 과 &lt;a href=&quot;https://github.com/nihgwu/hexo-hey&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;hexo-hey&lt;/a&gt; 가 있습니다. 저는 개발자라 그런지 직접 치는 맛이 좋아서 사용해보진 않았습니다만, 조만간 설치 및 사용법을 포스트하겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/jaredly/hexo-admin/blob/master/docs/pasted-0.png?raw=true&quot; alt=&quot;Hexo Admin Plugin&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/nihgwu/hexo-hey/raw/master/screenshot/1.jpg&quot; alt=&quot;Hexo Hey Plugin&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Related-Posts&quot; class=&quot;headerlink&quot; title=&quot;Related Posts&quot;&gt;&lt;/a&gt;Related Posts&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/14/get-started-with-hexo/&quot; title=&quot;워드프레스보다 쉬운 Hexo 블로그 시작하기&quot;&gt;워드프레스보다 쉬운 Hexo 블로그 시작하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/14/hexo-apply-hueman-theme/&quot; title=&quot;Hexo 추천 테마, Hueman 적용하기&quot;&gt;Hexo 추천 테마, Hueman 적용하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/21/hexo-basic-usage/&quot; title=&quot;Hexo 기본 사용법&quot;&gt;Hexo 기본 사용법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/19/hexo-tag-plugins/&quot; title=&quot;Hexo 태그 플러그인 (Tag plugins) 살펴보기&quot;&gt;Hexo 태그 플러그인 (Tag plugins) 살펴보기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/21/add-github-card-to-hexo/&quot; title=&quot;Hexo 네임카드 추가하기 (Github Card)&quot;&gt;Hexo 네임카드 추가하기 (Github Card)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/22/add-github-repository-timeline-badge-to-hexo/&quot; title=&quot;Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기&quot;&gt;Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/15/hexo-google-site-search-console-analytics/&quot; title=&quot;구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)&quot;&gt;구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/15/hexo-naver-search-webmaster/&quot; title=&quot;네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)&quot;&gt;네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/16/add-google-adsense-to-hexo/&quot; title=&quot;Hexo 블로그에 구글 애드센스(Adsense) 추가하기&quot;&gt;Hexo 블로그에 구글 애드센스(Adsense) 추가하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/16/opengraph-social-meta-tag/&quot; title=&quot;오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)&quot;&gt;오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/17/google-search-how-to-work/&quot; title=&quot;구글(Google) 검색 원리와 검색이 잘 되게 하는 방법&quot;&gt;구글(Google) 검색 원리와 검색이 잘 되게 하는 방법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/23/search-engine-optimization-hexo-plugins/&quot; title=&quot;검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인&quot;&gt;검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;이전 포스트인 &lt;a href=&quot;http://futurecreator.github.io/2016/06/21/hexo-basic-usage/&quot;&gt;Hexo 기본 사용법&lt;/a&gt;에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 
+    
+    </summary>
+    
+      <category term="Web" scheme="http://futurecreator.github.io/categories/Web/"/>
+    
+      <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
+    
+    
+      <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
+    
+      <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
+    
+      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
+    
+      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>정올(JUNGOL) 약수 (2809) 알고리즘 기초 문제 풀이</title>
@@ -1507,7 +1570,7 @@
     <link href="http://futurecreator.github.io/2016/06/21/hexo-basic-usage/"/>
     <id>http://futurecreator.github.io/2016/06/21/hexo-basic-usage/</id>
     <published>2016-06-20T15:59:57.000Z</published>
-    <updated>2016-08-17T14:04:37.000Z</updated>
+    <updated>2017-01-15T01:41:31.000Z</updated>
     
     <content type="html">&lt;p&gt;Hexo 는 이전 &lt;a href=&quot;http://futurecreator.github.io/2016/06/14/get-started-with-hexo/&quot;&gt;포스트&lt;/a&gt; 에서 알아본 간단한 커맨드만 있어도 충분히 사용 가능합니다. 하지만 Hexo 는 편하게 블로깅할 수 있는 여러가지 기능을 제공합니다. 이번 포스트에서는 기본적인 사용법을 좀 더 자세히 알아보겠습니다. 알아볼 기능들은 다음과 같습니다.&lt;/p&gt;
 &lt;ul&gt;
@@ -1810,7 +1873,8 @@
 &lt;li&gt;&lt;a href=&quot;/2016/06/16/add-google-adsense-to-hexo/&quot; title=&quot;Hexo 블로그에 구글 애드센스(Adsense) 추가하기&quot;&gt;Hexo 블로그에 구글 애드센스(Adsense) 추가하기&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2016/06/16/opengraph-social-meta-tag/&quot; title=&quot;오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)&quot;&gt;오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;/2016/06/17/google-search-how-to-work/&quot; title=&quot;구글(Google) 검색 원리와 검색이 잘 되게 하는 방법&quot;&gt;구글(Google) 검색 원리와 검색이 잘 되게 하는 방법&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/2016/06/23/search-engine-optimization-hexo-plugins/&quot; title=&quot;검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인&quot;&gt;검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인&lt;/a&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/23/search-engine-optimization-hexo-plugins/&quot; title=&quot;검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인&quot;&gt;검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/01/15/how-to-delete-post-in-hexo/&quot; title=&quot;Hexo 블로그에서 포스트 삭제하는 방법&quot;&gt;Hexo 블로그에서 포스트 삭제하는 방법&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </content>

@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2016/06/21/hexo-basic-usage/</loc>
+        <lastmod>2017-01-15T01:41:31.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2017/01/15/how-to-delete-post-in-hexo/</loc>
+        <lastmod>2017-01-15T01:40:14.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2017/01/12/jungol-algorithm-1071/</loc>
         <lastmod>2017-01-12T08:22:22.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -217,14 +233,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/19/evernote-blog-postach-io/</loc>
         <lastmod>2016-08-17T14:06:41.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2016/06/21/hexo-basic-usage/</loc>
-        <lastmod>2016-08-17T14:04:37.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
