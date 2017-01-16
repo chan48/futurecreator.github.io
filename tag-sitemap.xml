@@ -93,13 +93,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/error/</loc>
-        <lastmod>2016-06-24T06:11:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/swift/</loc>
         <lastmod>2016-06-27T14:52:04.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -296,13 +289,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/hexo/</loc>
-        <lastmod>2017-01-15T01:41:31.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/usage/</loc>
         <lastmod>2017-01-15T01:41:31.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -319,6 +305,20 @@
     <url>
         <loc>http://futurecreator.github.io/tags/algorithm/</loc>
         <lastmod>2017-01-16T07:40:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/hexo/</loc>
+        <lastmod>2017-01-16T08:27:23.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/error/</loc>
+        <lastmod>2017-01-16T08:27:23.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
