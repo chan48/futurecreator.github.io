@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2017-01-18T00:34:47.000Z</updated>
+  <updated>2017-01-18T00:36:22.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -20,13 +20,13 @@
     <link href="http://futurecreator.github.io/2017/01/17/jungol-algorithm-2815/"/>
     <id>http://futurecreator.github.io/2017/01/17/jungol-algorithm-2815/</id>
     <published>2017-01-17T12:55:50.000Z</published>
-    <updated>2017-01-18T00:34:47.000Z</updated>
+    <updated>2017-01-18T00:36:22.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;실력키우기-gt-수학-gt-10진수를-2진수로-2815-문제-클릭&quot;&gt;&lt;a href=&quot;#실력키우기-gt-수학-gt-10진수를-2진수로-2815-문제-클릭&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 수학 &amp;gt; 10진수를 2진수로 (2815) 문제 클릭&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;amp;wr_id=2081&amp;amp;sca=2020&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;실력키우기 &amp;gt; 수학 &amp;gt; 10진수를 2진수로 (2815) 문제 클릭&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;10진수를 2진수로 바꾸는 문제입니다. 10진수를 2진수로 바꾸기 위해서는 다음과 같이 2로 나눠가면서 몫과 나머지를 역순으로 취해 구할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://www.a24s.com/data/jeongbotongsinhakseub/junja/junja_8/ee8-2-1.jpg&quot; alt=&quot;http://www.a24s.com/data/jeongbotongsinhakseub/junja/junja_8/junja8-2.html&quot;&gt;&lt;/p&gt;
 &lt;p&gt;물론 Java 에서 제공하는 기본 API 를 사용할 수도 있습니다.&lt;/p&gt;
 &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Integer.toBinaryString(&lt;span class=&quot;number&quot;&gt;41&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;// 2진수로 변환 &quot;101001&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Integer.toOctalString(&lt;span class=&quot;number&quot;&gt;41&lt;/span&gt;)  &lt;span class=&quot;comment&quot;&gt;// 8진수로 변환 &quot;51&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Integer.toHexString(&lt;span class=&quot;number&quot;&gt;41&lt;/span&gt;)    &lt;span class=&quot;comment&quot;&gt;// 16진수로 변환&quot;29&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;하지만 정올에 올릴 경우 Timeout 이 나네요. 그래서 정석으로 코드를 구현해보겠습니다.&lt;/p&gt;
+&lt;p&gt;하지만 정올에 올릴 경우 Time Limit Exceed 이 나네요. 그래서 정석으로 코드를 구현해보겠습니다.&lt;/p&gt;
 &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**************************************************************&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Problem: 2815&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    User: future_creator&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Language: Java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Result: Success&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Time:176 ms&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Memory:10520 kb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;****************************************************************/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Main&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 입력된 10진수를 2진수로 변환하여 출력한다.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Scanner sc = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Scanner(System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n = sc.nextInt();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        String s = &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (n &amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            s = n % &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; + s;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            n = n / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        s = n + s;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(s);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
@@ -365,13 +365,13 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
-    
-      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
-    
       <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
     
       <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
+    
+      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
+    
+      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
   </entry>
   
@@ -2462,9 +2462,9 @@
       <category term="Reviews" scheme="http://futurecreator.github.io/categories/Reviews/"/>
     
     
-      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
-    
       <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
+    
+      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
       <category term="evernote" scheme="http://futurecreator.github.io/tags/evernote/"/>
     
@@ -3116,9 +3116,9 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
-    
       <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
+    
+      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
       <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
     
@@ -3389,13 +3389,13 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
-    
-      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
-    
       <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
     
       <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
+    
+      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
+    
+      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
   </entry>
   
