@@ -486,13 +486,13 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
-    
       <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
     
-      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
-    
       <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
+    
+      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
+    
+      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
   </entry>
   
@@ -2583,9 +2583,9 @@
       <category term="Reviews" scheme="http://futurecreator.github.io/categories/Reviews/"/>
     
     
-      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
-    
       <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
+    
+      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
       <category term="evernote" scheme="http://futurecreator.github.io/tags/evernote/"/>
     
@@ -3510,13 +3510,13 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
-    
       <category term="web" scheme="http://futurecreator.github.io/tags/web/"/>
     
-      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
-    
       <category term="markdown" scheme="http://futurecreator.github.io/tags/markdown/"/>
+    
+      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
+    
+      <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
   </entry>
   
