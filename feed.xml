@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2017-01-18T08:14:12.000Z</updated>
+  <updated>2017-01-18T08:59:27.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>정올(JUNGOL) 문자열변환(2518) 알고리즘 기초 문제 풀이</title>
+    <link href="http://futurecreator.github.io/2017/01/18/jungol-algorithm-2518/"/>
+    <id>http://futurecreator.github.io/2017/01/18/jungol-algorithm-2518/</id>
+    <published>2017-01-18T08:52:07.000Z</published>
+    <updated>2017-01-18T08:59:27.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;실력키우기-gt-문자열-gt-문자열변환-2518-문제-클릭&quot;&gt;&lt;a href=&quot;#실력키우기-gt-문자열-gt-문자열변환-2518-문제-클릭&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 문자열 &amp;gt; 문자열변환 (2518) 문제 클릭&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;amp;wr_id=1779&amp;amp;sca=2030&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;실력키우기 &amp;gt; 문자열 &amp;gt; 문자열변환 (2518) 문제 클릭&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;입력받은 교정 정보를 이용해서 해당 문자열을 교정하는 문제입니다. 문제 자체는 크게 어렵지 않습니다.&lt;/p&gt;
+&lt;p&gt;저는 교정 전후 문자 정보를 함께 저장하기 위해서 클래스를 하나 만들었습니다. 물론 그냥 &lt;code&gt;char[]&lt;/code&gt; 배열 여러개를 선언해서 사용하셔도 상관없습니다. 오타가 포함된 문자는 문자열이 아닌 문자 형태로 하나씩 입력되고 있네요. 이걸 &lt;code&gt;char&lt;/code&gt; 타입으로 받고 싶으시다면, &lt;code&gt;Scanner&lt;/code&gt; 자체에는 &lt;code&gt;nextChar()&lt;/code&gt; 이런 메소드가 없습니다. 따라서 &lt;code&gt;next().charAt(0)&lt;/code&gt; 으로 문자열로 받으신 후에 첫번째 문자에 접근해서 가져오시는 방법이 있습니다.&lt;/p&gt;
+&lt;p&gt;그리고 한가지 주의하실 점이 있습니다. 앞서 교정한 문자가 뒤에서 교정할 때 또 대상이 되어서 여러번 교정이 될 수 있습니다. 예를 들어, 기존 문자열에서 a 를 b 로 바꾸고, b 가 있으면 c 로 바꿔야 한다고 했을 때, 원본에서의 a 는 b 로 바뀌어야지 두번 바뀌어서 c 로 바뀌면 안됩니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;a -&amp;gt; b, b -&amp;gt; c 로 변환&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;만약 두 개를 차례로 적용해서 교정한다면?&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;abc&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-&amp;gt; ccc (x)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-&amp;gt; bcc (o)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;이렇게 하기 위해서 이미 교정이 된 문자는 교정이 되었다고 표시를 해야 합니다. 저는 &lt;code&gt;int[]&lt;/code&gt; 배열을 이용해서 1로 체크를 해줬습니다.&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;60&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;61&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;62&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;63&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;64&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**************************************************************&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Problem: 2518&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    User: future_creator&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Language: Java&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Result: Success&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Time:606 ms&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Memory:26904 kb&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;****************************************************************/&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.util.Scanner;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Main&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; AdjustInfo[] info;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt;[] arr;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Scanner sc = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Scanner(System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; n = sc.nextInt();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 수정할 내용 입력받기&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        info = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; AdjustInfo[n];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; n; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            info[i] = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; AdjustInfo(sc.next().charAt(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;), sc.next().charAt(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;));&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 오타가 포함된 문자 입력받기&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; l = sc.nextInt();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[] check = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;[l];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        arr = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt;[l];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; l; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            arr[i] = sc.next().charAt(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 수정하기&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; n; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; j = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; j &amp;lt; arr.length; j++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (arr[j] == info[i].before &amp;amp;&amp;amp; check[j] == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    arr[j] = info[i].after;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                    check[j] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 출력하기&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        StringBuffer sb = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; StringBuffer();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; l; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            sb.append(arr[i]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        System.out.println(sb.toString());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;AdjustInfo&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; before;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; after;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;AdjustInfo&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; before, &lt;span class=&quot;keyword&quot;&gt;char&lt;/span&gt; after)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.before = before;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.after = after;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;실력키우기-gt-문자열-gt-문자열변환-2518-문제-클릭&quot;&gt;&lt;a href=&quot;#실력키우기-gt-문자열-gt-문자열변환-2518-문제-클릭&quot; class=&quot;headerlink&quot; title=&quot;실력키우기 &amp;gt; 문자열 &amp;gt; 문자열변환 (2
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://futurecreator.github.io/categories/Algorithm/"/>
+    
+      <category term="Jungol" scheme="http://futurecreator.github.io/categories/Algorithm/Jungol/"/>
+    
+    
+      <category term="basic" scheme="http://futurecreator.github.io/tags/basic/"/>
+    
+      <category term="algorithm" scheme="http://futurecreator.github.io/tags/algorithm/"/>
+    
+  </entry>
   
   <entry>
     <title>정올(JUNGOL) 문자열 찾기(2514) 알고리즘 기초 문제 풀이</title>
@@ -1438,9 +1470,9 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
-    
       <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
+    
+      <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
     
   </entry>
   
@@ -2756,9 +2788,9 @@
       <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
     
     
-      <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
-    
       <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
+    
+      <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
     
       <category term="googlebot" scheme="http://futurecreator.github.io/tags/googlebot/"/>
     
@@ -3135,9 +3167,9 @@
     
       <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
     
-      <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
-    
       <category term="naver" scheme="http://futurecreator.github.io/tags/naver/"/>
+    
+      <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
     
       <category term="webmaster" scheme="http://futurecreator.github.io/tags/webmaster/"/>
     
@@ -3241,9 +3273,9 @@
     
       <category term="blog" scheme="http://futurecreator.github.io/tags/blog/"/>
     
-      <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
-    
       <category term="search" scheme="http://futurecreator.github.io/tags/search/"/>
+    
+      <category term="google" scheme="http://futurecreator.github.io/tags/google/"/>
     
       <category term="analytics" scheme="http://futurecreator.github.io/tags/analytics/"/>
     
