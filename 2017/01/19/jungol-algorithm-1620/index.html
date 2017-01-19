@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>정올(JUNGOL) 전화번호 속의 암호(1620) 알고리즘 기초 문제 풀이 | Writer, IT Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="basic,algorithm" />
+    
+
+    
+
+    <meta name="description" content="실력키우기 &amp;gt; 문자열 &amp;gt; 전화번호 속의 암호 (1620) 문제 클릭점점 문제가 길어지고 있네요. 지문은 길지만 문제는 굉장히 간단합니다. ‘-‘ 로 구분된 숫자가 연속된 문자열을 입력받아서 특정 더미를 선택하고, 각 자리수마다 특정 숫자를 더해서 출력하면 됩니다.
+각 숫자 더미는 4자리로 정해져있지만, 4자리보다 적게 들어올 수도 있고 많이 들어">
+<meta property="og:type" content="article">
+<meta property="og:title" content="정올(JUNGOL) 전화번호 속의 암호(1620) 알고리즘 기초 문제 풀이">
+<meta property="og:url" content="http://futurecreator.github.io/2017/01/19/jungol-algorithm-1620/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="실력키우기 &amp;gt; 문자열 &amp;gt; 전화번호 속의 암호 (1620) 문제 클릭점점 문제가 길어지고 있네요. 지문은 길지만 문제는 굉장히 간단합니다. ‘-‘ 로 구분된 숫자가 연속된 문자열을 입력받아서 특정 더미를 선택하고, 각 자리수마다 특정 숫자를 더해서 출력하면 됩니다.
+각 숫자 더미는 4자리로 정해져있지만, 4자리보다 적게 들어올 수도 있고 많이 들어">
+<meta property="og:image" content="http://futurecreator.github.io/images/thumbnail/algorithm_branding.png">
+<meta property="og:updated_time" content="2017-01-19T07:07:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="정올(JUNGOL) 전화번호 속의 암호(1620) 알고리즘 기초 문제 풀이">
+<meta name="twitter:description" content="실력키우기 &amp;gt; 문자열 &amp;gt; 전화번호 속의 암호 (1620) 문제 클릭점점 문제가 길어지고 있네요. 지문은 길지만 문제는 굉장히 간단합니다. ‘-‘ 로 구분된 숫자가 연속된 문자열을 입력받아서 특정 더미를 선택하고, 각 자리수마다 특정 숫자를 더해서 출력하면 됩니다.
+각 숫자 더미는 4자리로 정해져있지만, 4자리보다 적게 들어올 수도 있고 많이 들어">
+<meta name="twitter:image" content="http://futurecreator.github.io/images/thumbnail/algorithm_branding.png">
+<meta name="twitter:creator" content="@future_go">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+
+    
+    
+    <link rel="canonical" href="http://futurecreator.github.io/2017/01/19/jungol-algorithm-1620/"/>
+
+    
+
+    
+        <link rel="icon" href="/images/favicon.png" />
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+
+    
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Eric Han&#39;s IT Blog using Hexo</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/">Algorithm</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Algorithm/Jungol/">Jungol</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/App/">App</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/App/iOS/">iOS</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Spring/">Spring</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/">Web</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Web/Markdown/">Markdown</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="https://kr.linkedin.com/in/dongho-han-97465327">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Algorithm/Jungol/">Jungol</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2948714191026958"
+     data-ad-slot="8311183691"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-jungol-algorithm-1620" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        정올(JUNGOL) 전화번호 속의 암호(1620) 알고리즘 기초 문제 풀이
+        </h1>
+    
+
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2017/01/19/jungol-algorithm-1620/" class="article-date">
+    <time datetime="2017-01-19T06:53:37.000Z" itemprop="datePublished">2017-01-19</time>
+</a>
+            
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic/">basic</a></li></ul>
+
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="실력키우기-gt-문자열-gt-전화번호-속의-암호-1620-문제-클릭"><a href="#실력키우기-gt-문자열-gt-전화번호-속의-암호-1620-문제-클릭" class="headerlink" title="실력키우기 &gt; 문자열 &gt; 전화번호 속의 암호 (1620) 문제 클릭"></a><a href="http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;wr_id=893&amp;sca=2030" rel="external nofollow" target="_blank">실력키우기 &gt; 문자열 &gt; 전화번호 속의 암호 (1620) 문제 클릭</a></h3><p>점점 문제가 길어지고 있네요. 지문은 길지만 문제는 굉장히 간단합니다. ‘-‘ 로 구분된 숫자가 연속된 문자열을 입력받아서 특정 더미를 선택하고, 각 자리수마다 특정 숫자를 더해서 출력하면 됩니다.</p>
+<p>각 숫자 더미는 4자리로 정해져있지만, 4자리보다 적게 들어올 수도 있고 많이 들어올 수도 있습니다. 적은 경우는 부족한만큼 0을 붙여서 4자리를 만들어야 하고, 많은 경우는 에러 메시지를 출력해야합니다.</p>
+<p>0을 붙여서 4자리를 만드는 경우를 생각해봅시다. Oracle SQL 처럼 <code>LPAD</code> 함수가 있으면 좋겠지만 Java 에는 없네요. 원리는 이렇습니다. 들어오는 자리가 1 ~ 3자리인 경우에 왼쪽에 0을 붙여야하는 상황이므로 앞쪽에 먼저 0을 4개 붙인후 뒤쪽에서부터 4개만큼 자르면 됩니다. 뒤쪽에서부터 4개는 어떻게 자르면 될까요? <code>substring()</code> 메소드를 활용하면 되는데, 해당 문자열의 길이에서 4만큼 뺀 index 부터 잘라내면 되겠죠?</p>
+<p>추가로 말씀드리면, <code>substring()</code> 메소드는 파라미터를 하나만 받을 수도 있고, 두 개를 받을 수도 있습니다. 이러한 성질을 오버로딩(Overloading)이라고 하죠. 파라미터를 하나만 받는 경우는 해당 index 부터 마지막까지 글자를 잘라냅니다. 두 개를 받는 경우는 시작점과 끝점을 의미하는데, 이게 끝점의 경우 실제적으로는 그보다 한 자리 앞입니다. 이게 익숙하지 않은 경우 헷갈리기 쉬운데 이 때는 첫번째 파라미터가 시작점을 의미하고, 두번째 파라미터 - 첫번째 파라미터가 잘라내는 문자의 길이라고 생각하시면 쉽습니다. 하단의 코드에서 <code>substring(2, 5)</code> 가 2부터 시작해서 3개의 문자를 잘라낸다고 생각하시면 됩니다 (5 - 2 = 3개).</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hamburger</span></span><br><span class="line"><span class="comment">// 012345678</span></span><br><span class="line"></span><br><span class="line"><span class="string">"hamburger"</span>.substring(<span class="number">3</span>); <span class="comment">// "burger"</span></span><br><span class="line"><span class="string">"hamburger"</span>.substring(<span class="number">2</span>, <span class="number">5</span>); <span class="comment">// "mbu"</span></span><br></pre></td></tr></table></figure>
+<p>처음 부분에서 <code>String[]</code> 배열을 만들 때 <code>split()</code> 메소드를 사용했습니다. 매개변수로 “-“ 를 넘겨주면 “-“ 를 기준으로 해서 문자를 잘라내 <code>String[]</code> 을 만들어줍니다.</p>
+<p>전체 소스입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**************************************************************</span><br><span class="line">    Problem: 1620</span><br><span class="line">    User: future_creator</span><br><span class="line">    Language: Java</span><br><span class="line">    Result: Success</span><br><span class="line">    Time:180 ms</span><br><span class="line">    Memory:10600 kb</span><br><span class="line">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String s = sc.next();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 문자가 - 로 끝나는 경우는 split 에서 인식하지 못해서 0을 붙여줌.</span></span><br><span class="line">        <span class="keyword">if</span> (s.endsWith(<span class="string">"-"</span>)) &#123;</span><br><span class="line">            s = s + <span class="string">"0"</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">        <span class="keyword">int</span> p = sc.nextInt();</span><br><span class="line"></span><br><span class="line">        String[] arr = s.split(<span class="string">"-"</span>);</span><br><span class="line">        String s1 = arr[p - <span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 숫자가 4자리보다 많은 경우</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[i].length() &gt; <span class="number">4</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">"INPUT ERROR!"</span>);</span><br><span class="line">                System.exit(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 숫자가 4자리가 안되는 경우 0을 붙여서 4자리를 만든다.</span></span><br><span class="line">        <span class="keyword">if</span> (s1.length() &lt; <span class="number">4</span>) &#123;</span><br><span class="line">            s1 = <span class="string">"0000"</span> + s1;</span><br><span class="line">            s1 = s1.substring(s1.length() - <span class="number">4</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        String r = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s1.length(); i++) &#123;</span><br><span class="line">            t = Integer.parseInt(s1.charAt(i) + <span class="string">""</span>) + n;</span><br><span class="line">            <span class="keyword">if</span> (t &gt; <span class="number">9</span>) &#123;</span><br><span class="line">                t = t % <span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            r = r + t;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(r);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2948714191026958"
+     data-ad-slot="8311183691"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/future_go" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator/SpringBootGetStarted" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <div class="github-card" data-github="futurecreator" data-width="" data-height="" data-theme="default"></div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/01/19/jungol-algorithm-1239/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">정올(JUNGOL) 비밀편지(1239) 알고리즘 기초 문제 풀이</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/19/jungol-algorithm-1620/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 전화번호 속의 암호(1620) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/19/jungol-algorithm-1620/" class="title">정올(JUNGOL) 전화번호 속의 암호(1620) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-19T06:53:37.000Z" itemprop="datePublished">2017-01-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/19/jungol-algorithm-1239/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 비밀편지(1239) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/19/jungol-algorithm-1239/" class="title">정올(JUNGOL) 비밀편지(1239) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-19T05:38:29.000Z" itemprop="datePublished">2017-01-19</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/18/jungol-algorithm-2518/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 문자열변환(2518) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/18/jungol-algorithm-2518/" class="title">정올(JUNGOL) 문자열변환(2518) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-18T08:52:07.000Z" itemprop="datePublished">2017-01-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/18/jungol-algorithm-2514/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 문자열 찾기(2514) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/18/jungol-algorithm-2514/" class="title">정올(JUNGOL) 문자열 찾기(2514) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-18T07:12:31.000Z" itemprop="datePublished">2017-01-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/01/18/jungol-algorithm-2604/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/images/thumbnail/algorithm_branding.png)" alt="정올(JUNGOL) 그릇(2604) 알고리즘 기초 문제 풀이" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Algorithm/Jungol/">Jungol</a></p>
+                            <p class="item-title"><a href="/2017/01/18/jungol-algorithm-2604/" class="title">정올(JUNGOL) 그릇(2604) 알고리즘 기초 문제 풀이</a></p>
+                            <p class="item-date"><time datetime="2017-01-18T05:36:25.000Z" itemprop="datePublished">2017-01-18</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">41</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/Jungol/">Jungol</a><span class="category-list-count">41</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/App/">App</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/App/iOS/">iOS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reviews/">Reviews</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Spring/">Spring</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Hexo/">Hexo</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/Markdown/">Markdown</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/DS-Store/" style="font-size: 10px;">.DS_Store</a> <a href="/tags/adsense/" style="font-size: 10px;">adsense</a> <a href="/tags/algorithm/" style="font-size: 18.33px;">algorithm</a> <a href="/tags/analytics/" style="font-size: 10px;">analytics</a> <a href="/tags/atom/" style="font-size: 10px;">atom</a> <a href="/tags/basic/" style="font-size: 20px;">basic</a> <a href="/tags/blog/" style="font-size: 15px;">blog</a> <a href="/tags/editor/" style="font-size: 10px;">editor</a> <a href="/tags/error/" style="font-size: 11.67px;">error</a> <a href="/tags/evernote/" style="font-size: 10px;">evernote</a> <a href="/tags/github/" style="font-size: 11.67px;">github</a> <a href="/tags/google/" style="font-size: 13.33px;">google</a> <a href="/tags/googlebot/" style="font-size: 10px;">googlebot</a> <a href="/tags/hexo/" style="font-size: 16.67px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/mac/" style="font-size: 11.67px;">mac</a> <a href="/tags/mariadb/" style="font-size: 10px;">mariadb</a> <a href="/tags/markdown/" style="font-size: 13.33px;">markdown</a> <a href="/tags/metatag/" style="font-size: 10px;">metatag</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/namecard/" style="font-size: 10px;">namecard</a> <a href="/tags/naver/" style="font-size: 10px;">naver</a> <a href="/tags/opengraph/" style="font-size: 10px;">opengraph</a> <a href="/tags/osx/" style="font-size: 10px;">osx</a> <a href="/tags/pagerank/" style="font-size: 10px;">pagerank</a> <a href="/tags/plugin/" style="font-size: 11.67px;">plugin</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/postach/" style="font-size: 10px;">postach</a> <a href="/tags/repository/" style="font-size: 10px;">repository</a> <a href="/tags/search/" style="font-size: 13.33px;">search</a> <a href="/tags/seo/" style="font-size: 11.67px;">seo</a> <a href="/tags/settings/" style="font-size: 10px;">settings</a> <a href="/tags/social/" style="font-size: 10px;">social</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/start/" style="font-size: 10px;">start</a> <a href="/tags/swift/" style="font-size: 10px;">swift</a> <a href="/tags/tag/" style="font-size: 10px;">tag</a> <a href="/tags/theme/" style="font-size: 10px;">theme</a> <a href="/tags/usage/" style="font-size: 10px;">usage</a> <a href="/tags/velocity/" style="font-size: 10px;">velocity</a> <a href="/tags/web/" style="font-size: 13.33px;">web</a> <a href="/tags/webmaster/" style="font-size: 10px;">webmaster</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a> <a href="/tags/writing/" style="font-size: 10px;">writing</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-2948714191026958"
+     data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2017 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'http://futurecreator.github.io/2017/01/19/jungol-algorithm-1620/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
