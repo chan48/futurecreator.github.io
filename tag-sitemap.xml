@@ -170,14 +170,14 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/search/</loc>
+        <loc>http://futurecreator.github.io/tags/google/</loc>
         <lastmod>2016-06-28T13:52:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/google/</loc>
+        <loc>http://futurecreator.github.io/tags/search/</loc>
         <lastmod>2016-06-28T13:52:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -311,14 +311,14 @@
 
     <url>
         <loc>http://futurecreator.github.io/tags/basic/</loc>
-        <lastmod>2017-01-18T08:59:27.000Z</lastmod>
+        <lastmod>2017-01-19T05:46:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/algorithm/</loc>
-        <lastmod>2017-01-18T08:59:27.000Z</lastmod>
+        <lastmod>2017-01-19T05:46:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
