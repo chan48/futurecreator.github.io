@@ -3,30 +3,33 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Writer, IT Blog</title>
+    <title>정올(JUNGOL) 단어 세기(1516) 알고리즘 기초 문제 풀이 | Writer, IT Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
+        <meta name="keywords" content="basic,algorithm" />
+    
 
     
 
-      <meta name="description" content="Eric Han&apos;s IT Blog using Hexo">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Writer, IT Blog">
-<meta property="og:url" content="http://futurecreator.github.io/page/7/index.html">
+    <meta name="description" content="실력키우기 &amp;gt; 문자열 &amp;gt; 단어 세기 (1516) 문제 클릭임의의 문장을 입력받아 각 단어 별로 나눈 후에 단어들의 중복되는 개수를 구하는 문제입니다. 문제는 간단합니다. 입력받은 문장을 공백을 기준으로 단어 별로 나누기 위해서는 앞에서도 살펴봤던 split() 메소드를 이용합니다. splint(&amp;quot; &amp;quot;) 이렇게 하면 아주 간단하게">
+<meta property="og:type" content="article">
+<meta property="og:title" content="정올(JUNGOL) 단어 세기(1516) 알고리즘 기초 문제 풀이">
+<meta property="og:url" content="http://futurecreator.github.io/2017/01/19/jungol-algorithm-1516/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="Eric Han&apos;s IT Blog using Hexo">
-<meta property="og:image" content="http://futurecreator.github.io/images/keyboard.JPG">
+<meta property="og:description" content="실력키우기 &amp;gt; 문자열 &amp;gt; 단어 세기 (1516) 문제 클릭임의의 문장을 입력받아 각 단어 별로 나눈 후에 단어들의 중복되는 개수를 구하는 문제입니다. 문제는 간단합니다. 입력받은 문장을 공백을 기준으로 단어 별로 나누기 위해서는 앞에서도 살펴봤던 split() 메소드를 이용합니다. splint(&amp;quot; &amp;quot;) 이렇게 하면 아주 간단하게">
+<meta property="og:image" content="http://futurecreator.github.io/images/thumbnail/algorithm_branding.png">
+<meta property="og:updated_time" content="2017-01-19T07:38:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Writer, IT Blog">
-<meta name="twitter:description" content="Eric Han&apos;s IT Blog using Hexo">
-<meta name="twitter:image" content="http://futurecreator.github.io/images/keyboard.JPG">
+<meta name="twitter:title" content="정올(JUNGOL) 단어 세기(1516) 알고리즘 기초 문제 풀이">
+<meta name="twitter:description" content="실력키우기 &amp;gt; 문자열 &amp;gt; 단어 세기 (1516) 문제 클릭임의의 문장을 입력받아 각 단어 별로 나눈 후에 단어들의 중복되는 개수를 구하는 문제입니다. 문제는 간단합니다. 입력받은 문장을 공백을 기준으로 단어 별로 나누기 위해서는 앞에서도 살펴봤던 split() 메소드를 이용합니다. splint(&amp;quot; &amp;quot;) 이렇게 하면 아주 간단하게">
+<meta name="twitter:image" content="http://futurecreator.github.io/images/thumbnail/algorithm_branding.png">
 <meta name="twitter:creator" content="@future_go">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
 
     
     
-    <link rel="canonical" href="http://futurecreator.github.io/page/7/"/>
+    <link rel="canonical" href="http://futurecreator.github.io/2017/01/19/jungol-algorithm-1516/"/>
 
     
 
@@ -159,7 +162,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="home">Home</em>
+    <a class="page-title-link" href="/categories/Algorithm/">Algorithm</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Algorithm/Jungol/">Jungol</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -174,217 +177,116 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            
-
-    
-    
+                            <article id="post-jungol-algorithm-1516" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/06/15/hexo-google-site-search-console-analytics/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/google_search/analytics.jpg)" alt="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-url="http://futurecreator.github.io/2016/06/15/hexo-google-site-search-console-analytics/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2016-06-15T05:00:36.000Z" itemprop="datePublished">2016-06-15</time></p>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/06/15/hexo-google-site-search-console-analytics/">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
+        정올(JUNGOL) 단어 세기(1516) 알고리즘 기초 문제 풀이
         </h1>
     
 
-        <p class="article-excerpt">
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2017/01/19/jungol-algorithm-1516/" class="article-date">
+    <time datetime="2017-01-19T07:29:00.000Z" itemprop="datePublished">2017-01-19</time>
+</a>
             
-이번 포스팅에서는 구글에서 우리 Hexo 블로그가 잘 검색되도록 해보겠습니다. 일단 사이트부터 등록을 하고 검색엔진 최적화를 위한 다양한 기술을 살펴보겠습니다.
-검색 최적화구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 크롤링이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가 없
-        </p>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic/">basic</a></li></ul>
+
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="실력키우기-gt-문자열-gt-단어-세기-1516-문제-클릭"><a href="#실력키우기-gt-문자열-gt-단어-세기-1516-문제-클릭" class="headerlink" title="실력키우기 &gt; 문자열 &gt; 단어 세기 (1516) 문제 클릭"></a><a href="http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&amp;wr_id=788&amp;sca=2030" rel="external nofollow" target="_blank">실력키우기 &gt; 문자열 &gt; 단어 세기 (1516) 문제 클릭</a></h3><p>임의의 문장을 입력받아 각 단어 별로 나눈 후에 단어들의 중복되는 개수를 구하는 문제입니다. 문제는 간단합니다. 입력받은 문장을 공백을 기준으로 단어 별로 나누기 위해서는 앞에서도 살펴봤던 <code>split()</code> 메소드를 이용합니다. <code>splint(&quot; &quot;)</code> 이렇게 하면 아주 간단하게 공백을 기준으로 나눠진 <code>String[]</code> 을 얻을 수 있습니다.</p>
+<p>그 다음으로 이 배열을 돌면서 단어수를 체크해야 합니다. 총 단어의 종류가 얼마나 있는지 모르기 때문에 일반 배열을 사용하기엔 껄끄럽습니다. 그래서 <code>Map</code> 을 사용하기로 합니다. <code>Map</code> 은 <key, value=""> 쌍으로 이루어진 컬렉션입니다. 중복되지 않은 Key 를 이용해 Value 를 저장할 수 있습니다. 백화점 물품보관소에 이름표를 붙여서 짐을 저장해놓았다가 이름표를 이용해서 짐을 찾는 걸 상상하시면 쉬울 것 같네요. 그리고 여기서 <code>Map</code> 구현체로는 <code>TreeMap</code> 을 사용했습니다. <code>Map</code> 은 정렬을 사용하지 않기 때문에 순서가 없습니다만, <code>TreeMap</code> 은 키를 기준으로 정렬을 사용해 내부적으로 정렬된 자료를 저장할 수 있습니다.</key,></p>
+<p><code>put</code> 을 이용해서 <code>Map</code> 에 자료를 저장하고, <code>get</code> 을 이용해서 저장된 값을 꺼내올 수 있습니다. <code>put</code> 은 키가 존재할 경우는 값을 덮어쓰기 때문에 수정의 역할도 합니다. 값을 출력할 때는 <code>for</code> 문을 이용해서 출력할 수도 있지만 <code>Iterator</code> 를 이용해서 출력해봤습니다. <code>Map</code> 을 이용해서 값을 다루는 것은 기본적인 사용법을 크게 벗어나지 않으므로 소스를 참고하시면 되겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**************************************************************</span><br><span class="line">    Problem: 1516</span><br><span class="line">    User: future_creator</span><br><span class="line">    Language: Java</span><br><span class="line">    Result: Success</span><br><span class="line">    Time:248 ms</span><br><span class="line">    Memory:10640 kb</span><br><span class="line">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">import</span> java.util.TreeMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line"></span><br><span class="line">            String s = sc.nextLine();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (s.equals(<span class="string">"END"</span>)) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            String[] arr = s.split(<span class="string">" "</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 각 단어들의 발생 빈도를 사전순으로 출력한다.</span></span><br><span class="line">            Map&lt;String, Integer&gt; map = <span class="keyword">new</span> TreeMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> l = arr.length;</span><br><span class="line">            <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (map.containsKey(arr[i])) &#123;</span><br><span class="line">                    <span class="comment">// put 시 키가 이미 존재하면 덮어씀 (수정)</span></span><br><span class="line">                    map.put(arr[i], map.get(arr[i]) + <span class="number">1</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    map.put(arr[i], <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 내용 출력</span></span><br><span class="line">            Iterator&lt;String&gt; it = map.keySet().iterator();</span><br><span class="line">            <span class="keyword">while</span> (it.hasNext()) &#123;</span><br><span class="line">                String k = it.next();</span><br><span class="line">                System.out.println(k + <span class="string">" : "</span> + map.get(k));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2948714191026958"
+     data-ad-slot="8311183691"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
     </div>
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/06/14/atom-as-markdown-editor/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/atom/thumbnail.png)" alt="Atom 을 마크다운(Markdown) 에디터로 사용하기" class="thumbnail-image"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-url="http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Markdown/">Markdown</a>
-            </p>
-            <p class="date"><time datetime="2016-06-14T10:36:59.000Z" itemprop="datePublished">2016-06-14</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/06/14/atom-as-markdown-editor/">Atom 을 마크다운(Markdown) 에디터로 사용하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            요즘에 Markdown 문서를 작성할 일이 많아졌습니다. 그리고 마크다운 특유의 깔끔하고 정리된 레이아웃이 좋아서 자꾸 손이 가네요. 저는 Macbook과 Windows PC 모두 쓰고 있는데요, Mac이야 마크다운을 지원하는 좋은 유료 에디터들이 워낙 많지만 Windows에서는 딱히 마음에 드는 에디터가 없어서 고민이었습니다. 에디터로는 Notepad++
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
 
     
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/06/14/hexo-apply-hueman-theme/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/hexo/hexo_example.jpg)" alt="Hexo 추천 테마, Hueman 적용하기" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-url="http://futurecreator.github.io/2016/06/14/hexo-apply-hueman-theme/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2016-06-14T10:25:48.000Z" itemprop="datePublished">2016-06-14</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/06/14/hexo-apply-hueman-theme/">Hexo 추천 테마, Hueman 적용하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Hexo를 시작한 후 여러가지 테마를 적용해봤지만 이만한 테마가 없더군요. Hueman 이라는 테마로 깔끔하고 기능도 굉장히 다양합니다. 위젯이나 애드센스 이런 건 나중에 다루도록 하고 일단 테마에서 제공하는 기능들부터 살펴보겠습니다.
-설치하기블로그 루트 폴더에서 명령어로 테마를 받습니다.
-1$ git clone https://github.com/ppoff
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/06/14/get-started-with-hexo/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/images/hexo/hexo_index.png)" alt="워드프레스보다 쉬운 Hexo 블로그 시작하기" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-url="http://futurecreator.github.io/2016/06/14/get-started-with-hexo/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Web/">Web</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Web/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2016-06-14T07:44:00.000Z" itemprop="datePublished">2016-06-14</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/06/14/get-started-with-hexo/">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            네이버 블로그를 시작하면서 아쉬웠던 점은 마크다운(Markdown) 언어를 지원하지 않는다는 점이었습니다. 그래서 Markdown here 라는 크롬 익스텐션을 이용해서 마크다운으로 렌더링하고 에디터에 붙여넣는 방식으로 블로그를 작성했습니다.
-문제는 네이버 블로그의 스마트 에디터 와 호환이 제대로 되지 않는다는 점이었습니다. 열심히 작성했던 포스트가 모바일
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
-
-    <nav id="page-nav">
-        <span class="pages">Page 7 of 7</span>
-        <a class="extend prev" rel="prev" href="/page/6/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
-    </nav>
+    </section>
 
 
                         </div>
@@ -423,6 +325,19 @@ ga('send', 'pageview');
     </div>
     <div class="github-card" data-github="futurecreator" data-width="" data-height="" data-theme="default"></div>
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/01/19/jungol-algorithm-1620/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">정올(JUNGOL) 전화번호 속의 암호(1620) 알고리즘 기초 문제 풀이</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -597,11 +512,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'futurecreator';
     
     
+    var disqus_url = 'http://futurecreator.github.io/2017/01/19/jungol-algorithm-1516/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
