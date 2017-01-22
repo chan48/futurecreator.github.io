@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2017-01-19T07:38:54.000Z</updated>
+  <updated>2017-01-22T04:48:54.000Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 배포(Deploy) 시 Github 에서 Page build failure 메일 올 때 해결 방법</title>
+    <link href="http://futurecreator.github.io/2017/01/22/hexo-page-build-failure/"/>
+    <id>http://futurecreator.github.io/2017/01/22/hexo-page-build-failure/</id>
+    <published>2017-01-22T04:25:47.000Z</published>
+    <updated>2017-01-22T04:48:54.000Z</updated>
+    
+    <content type="html">&lt;p&gt;바람 잘 날 없는 Hexo 블로그.. 오늘은 Github 에서 메일 한 통이 왔습니다. 서버에 deploy 하는데 이상은 없는데 할 때마다 빌드가 실패했다고 메일이 옵니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/thumbnail/build_failure.jpg&quot; alt=&quot;오늘도 빌드 실패&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;증상&quot;&gt;&lt;a href=&quot;#증상&quot; class=&quot;headerlink&quot; title=&quot;증상&quot;&gt;&lt;/a&gt;증상&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Title: [futureCreator/futurecreator.github.io] Page build failure&lt;br&gt;The page build failed with the following error:&lt;br&gt;unable to build page. Please try again later.&lt;br&gt;For information on troubleshooting Jekyll see:&lt;br&gt;&lt;a href=&quot;https://help.github.com/articles/troubleshooting-jekyll-builds&quot; rel=&quot;external nofollow&quot; target=&quot;_blank&quot;&gt;https://help.github.com/articles/troubleshooting-jekyll-builds&lt;/a&gt;&lt;br&gt;If you have any questions you can contact us by replying to this email.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;그리고 수정해서 배포한 내용은 원격 사이트에 반영이 안되고 있습니다. 클린하고 재생성 및 배포를 해봐도 안되고 빌드 실패했단 메일만 날라옵니다.&lt;/p&gt;
+&lt;h2 id=&quot;해결-방법&quot;&gt;&lt;a href=&quot;#해결-방법&quot; class=&quot;headerlink&quot; title=&quot;해결 방법&quot;&gt;&lt;/a&gt;해결 방법&lt;/h2&gt;&lt;p&gt;Troubleshooting 페이지에 찾아가봐도 이런 경우에는 별 다른 방법이 없네요. 메일 본문에 나와있는대로 잠깐 기다려봤더니 해결..&lt;/p&gt;
+&lt;h3 id=&quot;Related-Posts&quot;&gt;&lt;a href=&quot;#Related-Posts&quot; class=&quot;headerlink&quot; title=&quot;Related Posts&quot;&gt;&lt;/a&gt;Related Posts&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/24/hexo-ds-store-error/&quot; title=&quot;Hexo .DS_Store TypeError 해결 방법&quot;&gt;Hexo .DS_Store TypeError 해결 방법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/14/get-started-with-hexo/&quot; title=&quot;워드프레스보다 쉬운 Hexo 블로그 시작하기&quot;&gt;워드프레스보다 쉬운 Hexo 블로그 시작하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/14/hexo-apply-hueman-theme/&quot; title=&quot;Hexo 추천 테마, Hueman 적용하기&quot;&gt;Hexo 추천 테마, Hueman 적용하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/21/hexo-basic-usage/&quot; title=&quot;Hexo 기본 사용법&quot;&gt;Hexo 기본 사용법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/19/hexo-tag-plugins/&quot; title=&quot;Hexo 태그 플러그인 (Tag plugins) 살펴보기&quot;&gt;Hexo 태그 플러그인 (Tag plugins) 살펴보기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/21/add-github-card-to-hexo/&quot; title=&quot;Hexo 네임카드 추가하기 (Github Card)&quot;&gt;Hexo 네임카드 추가하기 (Github Card)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/22/add-github-repository-timeline-badge-to-hexo/&quot; title=&quot;Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기&quot;&gt;Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2016/06/16/add-google-adsense-to-hexo/&quot; title=&quot;Hexo 블로그에 구글 애드센스(Adsense) 추가하기&quot;&gt;Hexo 블로그에 구글 애드센스(Adsense) 추가하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/2017/01/16/push-internal-server-error-in-hexo/&quot; title=&quot;Hexo 배포(Deploy) 시 Internal Server Error Everything up-to-date 발생 시 해결법&quot;&gt;Hexo 배포(Deploy) 시 Internal Server Error Everything up-to-date 발생 시 해결법&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;바람 잘 날 없는 Hexo 블로그.. 오늘은 Github 에서 메일 한 통이 왔습니다. 서버에 deploy 하는데 이상은 없는데 할 때마다 빌드가 실패했다고 메일이 옵니다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/thumbnail/build
+    
+    </summary>
+    
+      <category term="Web" scheme="http://futurecreator.github.io/categories/Web/"/>
+    
+      <category term="Hexo" scheme="http://futurecreator.github.io/categories/Web/Hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
+    
+      <category term="error" scheme="http://futurecreator.github.io/tags/error/"/>
+    
+  </entry>
   
   <entry>
     <title>정올(JUNGOL) 단어 세기(1516) 알고리즘 기초 문제 풀이</title>
@@ -1988,9 +2034,9 @@
     
       <category term="hexo" scheme="http://futurecreator.github.io/tags/hexo/"/>
     
-      <category term="github" scheme="http://futurecreator.github.io/tags/github/"/>
-    
       <category term="plugins" scheme="http://futurecreator.github.io/tags/plugins/"/>
+    
+      <category term="github" scheme="http://futurecreator.github.io/tags/github/"/>
     
       <category term="repository" scheme="http://futurecreator.github.io/tags/repository/"/>
     
