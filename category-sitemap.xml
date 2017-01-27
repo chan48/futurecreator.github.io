@@ -56,13 +56,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/categories/Algorithm/</loc>
-        <lastmod>2017-01-26T15:58:58.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/categories/Algorithm/Jungol/</loc>
         <lastmod>2017-01-26T15:58:58.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -72,6 +65,20 @@
     <url>
         <loc>http://futurecreator.github.io/categories/Java/</loc>
         <lastmod>2017-01-26T17:24:18.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/categories/Algorithm/</loc>
+        <lastmod>2017-01-27T11:06:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/categories/Algorithm/Basic/</loc>
+        <lastmod>2017-01-27T11:06:41.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
